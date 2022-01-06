@@ -1,11 +1,16 @@
 # 2022 Group Project
 
 Roles:
+
 William Hackett - Sound Director & Programmer
+
 Jack Staker - Graphic Designer & Programmer
 Henry Christiansen - Programmer
+
 Jack Nebeker - Programmer
+
 Sophia Turner - Programmer
+
 Andry Joseph - Programmer
 
 Description
