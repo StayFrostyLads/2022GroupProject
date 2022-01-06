@@ -17,6 +17,7 @@ Andry Joseph - Programmer
 ## Description:
 
 Desert of Doom is a clone of Thin Ice by Club Penguin. 
+Controls are WASD/Arrow Keys to move
 
 ## Documentation
 
