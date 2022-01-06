@@ -2,10 +2,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class EntryPoint {
-  public static void main(String[] args) {
-	    JFrame frame = new JFrame();
-	    frame.setSize(800,600);
+public class DesertOfDoom {
+  public static void main(String[] args) extends JFrame {
+
+	    setSize(800,600);
 	    CardLayout cL = new CardLayout();
 	    
 	    // Panels
@@ -42,8 +42,8 @@ public class EntryPoint {
 	    cards.add(gameOver, "Game Over");
 	    frame.add(cards, null); // If we use GridBagLayout, it might be useful when we start coding game because then it will be easy to implement up, down ... grid movements of thing
 	    cL.first(cards);
-	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	    frame.setVisible(true);
+	    setDefaultCloseOperation(EXIT_ON_CLOSE);
+	    setVisible(true);
 	    
 	    // Buttons
       JButton tempLB1 = new JButton("Level 2");
