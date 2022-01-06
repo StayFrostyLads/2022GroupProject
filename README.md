@@ -1,6 +1,6 @@
-# 2022 Group Project
+# Desert of Doom
 
-Roles:
+## Roles:
 
 William Hackett - Sound Director & Programmer
 
@@ -14,10 +14,12 @@ Sophia Turner - Programmer
 
 Andry Joseph - Programmer
 
-Description
+## Description:
 
-Todo: include logo or graphic
+Desert of Doom is a clone of Thin Ice by Club Penguin. 
 
 ## Documentation
+
+Flow Chart:
 ![Flow Chart](https://user-images.githubusercontent.com/61328987/148413463-abf1f0d4-8fff-498f-be9c-a7014a29997b.png)
 
