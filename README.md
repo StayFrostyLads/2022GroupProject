@@ -5,6 +5,7 @@ Roles:
 William Hackett - Sound Director & Programmer
 
 Jack Staker - Graphic Designer & Programmer
+
 Henry Christiansen - Programmer
 
 Jack Nebeker - Programmer
