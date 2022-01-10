@@ -2,17 +2,17 @@
 
 ## Roles:
 
-Dr. William Hackett PhD - Director of Sound
+Dr. William B. Hackett PhD - Director of Sound
 
-Mr. Jack Staker - Graphic Designer
+Jack Staker - Graphic Designer
 
-Mr. Henry Christiansen - Senior Developer
+Henry Christiansen - Senior Developer
 
-Mr. Jack Nebeker - Developer & GitHub Manager
+Jack Nebeker - Developer & GitHub Manager
 
-Ms. Sophia Turner - Developer & Level Architect
+Sophia Turner - Developer & Level Architect
 
-Ms. Andry Joseph - Developer & Level Architect
+Andry Joseph - Developer & Level Architect
 
 ## Description:
 
