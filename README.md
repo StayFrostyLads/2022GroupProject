@@ -2,13 +2,13 @@
 
 ## Roles:
 
-William Hackett - Sound Director
+William Hackett - Director of Sound
 
 Jack Staker - Graphic Designer
 
 Henry Christiansen - Senior Developer
 
-Jack Nebeker - Senior Developer
+Jack Nebeker - Developer & GitHub Manager
 
 Sophia Turner - Developer & Level Architect
 
