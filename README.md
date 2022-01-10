@@ -2,17 +2,17 @@
 
 ## Roles:
 
-William Hackett - Sound Director & Programmer
+William Hackett - Sound Director
 
-Jack Staker - Graphic Designer & Programmer
+Jack Staker - Graphic Designer
 
-Henry Christiansen - Programmer
+Henry Christiansen - Senior Developer
 
-Jack Nebeker - Programmer
+Jack Nebeker - Senior Developer
 
-Sophia Turner - Programmer
+Sophia Turner - Developer & Level Architect
 
-Andry Joseph - Programmer
+Andry Joseph - Developer & Level Architect
 
 ## Description:
 
