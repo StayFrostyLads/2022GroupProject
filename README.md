@@ -2,9 +2,9 @@
 
 ## Roles:
 
-Dr. William C. Hackett PhD - Director of Sound
+Dr. William C. Hackett PhD - Director of Sound and Graphic Designer
 
-Jack Staker - Graphic Designer
+Sir Jack Staker - Knight of Graphic Design
 
 Henry Christiansen - Senior Developer
 
