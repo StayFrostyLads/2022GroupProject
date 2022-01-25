@@ -2,7 +2,7 @@
 
 ## Roles:
 
-Dr. William B. Hackett PhD - Director of Sound
+Dr. William C. Hackett PhD - Director of Sound
 
 Jack Staker - Graphic Designer
 
