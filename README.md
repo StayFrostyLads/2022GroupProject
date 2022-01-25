@@ -8,7 +8,7 @@ Jack Staker - Graphic Designer
 
 Henry Christiansen - Senior Developer
 
-Jack Nebeker - Developer & GitHub Manager & Spelling Checker
+Jack Nebeker - Developer & GitHub Manager & Spelling Speciailist
 
 Sophia Turner - Developer & Level Architect
 
