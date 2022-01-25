@@ -4,7 +4,7 @@
 
 Dr. William C. Hackett PhD - Director of Sound and Graphic Designer
 
-Sir Jack Staker - Knight of Graphic Design
+Sir Jack D. Staker - Knight of Graphic Design
 
 Henry Christiansen - Senior Developer
 
