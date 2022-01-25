@@ -1,3 +1,4 @@
+package panel;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -6,12 +7,12 @@ public class BackgroundPanel extends JPanel {
     JPanel game;
     JLabel level;
     String levelText;
-    static JButton quit, title;
+    public static JButton quit, title;
     int x;
     
-	BackgroundPanel() {
+	public BackgroundPanel() {
 		setLayout(null);
-		game = new GamePage();
+		game = new GamePanel();
 		add(game);
 		x = 1;
 		levelText = "Level " + String.valueOf(x);
