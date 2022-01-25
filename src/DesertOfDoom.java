@@ -1,8 +1,12 @@
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.*;
+
+import panel.*;
+
 
 public class DesertOfDoom extends JFrame {
 	public JPanel cards, title, instruction, background, lose, win;
@@ -65,7 +69,7 @@ public class DesertOfDoom extends JFrame {
 		});
 		BackgroundPanel.title.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.exit(0);
+				cL.show(cards,  "title");
 			}
 		});
 		
