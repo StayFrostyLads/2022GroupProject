@@ -1,9 +1,10 @@
+package panel;
 import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import java.awt.*;
 
-public class GamePage extends JPanel {
+public class GamePanel extends JPanel {
 	int level;
 	int[][] level1;
 	int[][] level2;
@@ -16,7 +17,7 @@ public class GamePage extends JPanel {
 	int[][] level9;
 	int[][] level10;
 	
-	GamePage() {
+	GamePanel() {
 		level = 1;
 		setLayout(new GridLayout(8,8));
 		setSize(675,486);
