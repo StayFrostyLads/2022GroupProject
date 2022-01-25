@@ -1,3 +1,4 @@
+import panel.*;
 import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
