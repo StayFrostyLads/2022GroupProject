@@ -1,13 +1,14 @@
+package panel;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class InstructionPanel extends JPanel {
 	
-	static JButton start, quit;
+	public static JButton start, quit;
 	JLabel title;
 	
-	InstructionPanel() {
+	public InstructionPanel() {
 		//setLayout(null);
 		JLabel title = new JLabel("Instructions"); //Will be image in future - Stacker just say Desert of Doom in good font
 		title.setBounds(50,50,200,50);
