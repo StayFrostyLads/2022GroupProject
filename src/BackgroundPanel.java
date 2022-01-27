@@ -1,4 +1,6 @@
 package panel;
+import java.awt.*;
+
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -16,8 +18,9 @@ public class BackgroundPanel extends JPanel {
 		add(game);
 		x = 1;
 		levelText = "Level " + String.valueOf(x);
-		level = new JLabel(levelText);
-		level.setBounds(300,10,200,30);
+		level = new JLabel(levelText, JLabel.CENTER);
+		level.setFont(new Font("Garamond", Font.PLAIN, 30));
+		level.setBounds(380,10,200,30);
 		add(level);
 		
 		quit = new JButton("Quit");
