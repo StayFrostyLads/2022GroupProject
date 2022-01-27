@@ -1,4 +1,3 @@
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -7,17 +6,15 @@ import javax.swing.*;
 
 import panel.*;
 
-
 public class DesertOfDoom extends JFrame {
 	public JPanel cards, title, instruction, background, lose, win;
 
 	public DesertOfDoom() {
-		setTitle("MultiPanel Test");
-		setSize(700, 600);
+		setTitle("Desert of Doom");
+		setSize(960, 853);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setLocationRelativeTo(null);
 		setVisible(true);
-
+		
 		CardLayout cL = new CardLayout();
 		cards = new JPanel(cL);
 		title = new TitlePanel();
