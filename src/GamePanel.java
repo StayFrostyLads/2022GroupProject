@@ -7,17 +7,8 @@ import javax.swing.JPanel;
 import java.awt.*;
 
 public class GamePanel extends JPanel {
-	int level;
-	String[][] level1;
-	String[][] level2;
-	String[][] level3;
-	String[][] level4;
-	String[][] level5;
-	String[][] level6;
-	String[][] level7;
-	String[][] level8;
-	String[][] level9;
-	String[][] level10;
+	public static int level;
+	public static String[][] level1, level2, level3, level4, level5, level6, level7, level8, level9, level10;
 	
 	GamePanel() {
 		level = 1;
@@ -25,9 +16,8 @@ public class GamePanel extends JPanel {
 		setSize(762,602);
 		setLocation(5,70);
 		setBorder(BorderFactory.createLineBorder(Color.black));
-		for (int x = 0; x < 285; x++) {
-			add(createBlock("sand"));
-		}
+		
+		
 		
 	}
 	
@@ -60,6 +50,8 @@ public class GamePanel extends JPanel {
 		} else if (type.equals("key")) {
 			ImageIcon key = new ImageIcon("./images/key.png");
 			tile.setIcon(key);
+		} else if (type.equals("blank")) {
+
 		} else {
 			tile.setText("Failure");
 		}
