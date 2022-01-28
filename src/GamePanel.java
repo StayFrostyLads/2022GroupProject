@@ -1,39 +1,70 @@
 package panel;
+
 import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import java.awt.*;
 
 public class GamePanel extends JPanel {
 	int level;
-	int[][] level1;
-	int[][] level2;
-	int[][] level3;
-	int[][] level4;
-	int[][] level5;
-	int[][] level6;
-	int[][] level7;
-	int[][] level8;
-	int[][] level9;
-	int[][] level10;
+	String[][] level1;
+	String[][] level2;
+	String[][] level3;
+	String[][] level4;
+	String[][] level5;
+	String[][] level6;
+	String[][] level7;
+	String[][] level8;
+	String[][] level9;
+	String[][] level10;
 	
 	GamePanel() {
 		level = 1;
-		setLayout(new GridLayout(8,8));
-		setSize(675,486);
+		setLayout(new GridLayout(15,19)); 
+		setSize(762,602);
 		setLocation(5,70);
 		setBorder(BorderFactory.createLineBorder(Color.black));
+		for (int x = 0; x < 285; x++) {
+			add(createBlock("sand"));
+		}
 		
-		JLabel text = new JLabel("Game Goes Here");
-		add(text);
-		
-		// Level Design --> fill each level array with level design, [1][1] corresponds to upper left corner
-		// use tile class and just set each array element to corresponding tile
-		// level design goes here
 	}
+	
 	
 	public void setLevel(int level) {
 		
+	}
+	
+	private JLabel createBlock(String type) {
+		JLabel tile = new JLabel();
+		if (type.equals("wall")) {
+			
+		} else if (type.equals("sand")) {
+			ImageIcon sand = new ImageIcon("./images/sand.png");
+			tile.setIcon(sand);
+		} else if (type.equals("quick sand")) {
+			ImageIcon quickSand = new ImageIcon("./images/spiral.png");
+			tile.setIcon(quickSand);
+		} else if (type.equals("end point")) {
+			
+		} else if (type.equals("start point")) {
+			
+		}  else if (type.equals("money")) {
+			
+		} else if (type.equals("portal")) {
+			
+		} else if (type.equals("hard sand")) {
+			ImageIcon hardSand = new ImageIcon("./images/sand brick.png");
+			tile.setIcon(hardSand);
+		} else if (type.equals("key")) {
+			ImageIcon key = new ImageIcon("./images/key.png");
+			tile.setIcon(key);
+		} else {
+			tile.setText("Failure");
+		}
+		
+		return tile;
 	}
 
 }
