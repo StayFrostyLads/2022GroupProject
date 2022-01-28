@@ -6,10 +6,14 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import java.awt.*;
+import java.awt.event.KeyEvent;
 
 public class GamePanel extends JPanel {
 	public static int level;
 	public static String[][] level2, level3, level4, level5, level6, level7, level8, level9, level10;
+	public static JLabel character;
+	public static String[][] currentLevel;
+	boolean play;
 
 	// Level example from thin ice level 1 --> for testing as no levels made yet
 	public static String[][] level1 = {
@@ -34,11 +38,11 @@ public class GamePanel extends JPanel {
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
-					"wall", "wall", "wall", "wall ", "blank", "blank" },
+					"wall", "wall", "wall", "wall", "blank", "blank" },
 			{ "blank", "blank", "wall", "end", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
 					"sand", "sand", "start", "wall", "blank", "blank" },
 			{ "blank", "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
-					"wall", "wall", "wall", "wall ", "blank", "blank" },
+					"wall", "wall", "wall", "wall", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
@@ -46,22 +50,24 @@ public class GamePanel extends JPanel {
 
 	GamePanel() {
 		level = 1;
+		character = new Character(0, 0);
+		character.setIcon(new ImageIcon("./images/character.png"));
 		setLayout(new GridLayout(15, 19));
 		setSize(762, 602);
 		setLocation(5, 70);
 		setBorder(BorderFactory.createLineBorder(Color.black));
+		
 		setLevel(1);
-		renderAndSetCurrentLevel();
+		initializeLevel();
 
 	}
 
 	public void setLevel(int l) {
 		level = l;
 	}
-	
-	public void renderAndSetCurrentLevel() {
+
+	public void initializeLevel() {
 		removeAll();
-		String[][] currentLevel = new String[15][19];
 
 		if (level == 1) {
 			currentLevel = level1;
@@ -84,16 +90,17 @@ public class GamePanel extends JPanel {
 		} else if (level == 10) {
 			currentLevel = level10;
 		}
-		
-		for(int i = 0; i < 15; i++) {
+
+		for (int i = 0; i < 15; i++) {
 			for (int j = 0; j < 19; j++) {
-				add(createBlock(currentLevel[i][j]));
-				if (currentLevel[i][j] == "start") {
-					Character.setPosX(j);
-					Character.setPosY(i);
+				if (currentLevel[i][j].equals("start")) {
+					add(character);
+				} else {
+					add(createBlock(currentLevel[i][j]));
 				}
 			}
-		}	
+
+		}
 	}
 
 	private JLabel createBlock(String type) {
@@ -124,6 +131,7 @@ public class GamePanel extends JPanel {
 			tile.setText(".");
 		} else {
 			tile.setText("Error");
+			System.out.println("Error: '" + type + "' block unable to render");
 		}
 
 		return tile;
