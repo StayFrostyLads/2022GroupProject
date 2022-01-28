@@ -1,51 +1,37 @@
 package main;
 
 import java.awt.event.KeyEvent;
+import javax.swing.ImageIcon;
+import javax.swing.JComponent;
+import javax.swing.JLabel;
 import panel.GamePanel;
 
-public class Character {
+public class Character extends JLabel {
 	static int posX;
 	static int posY;
 	boolean canUp;
 	boolean canDown;
 	boolean canLeft;
 	boolean canRight;
-	boolean dead;
+	public static boolean lose, win;
 
-	Character() {
-
+	public Character(int X, int Y) {
+		posX = X;
+		posY = Y;
+		setVisible(true);
 	}
 
 	public void checkSurroundings() {
-		String[][] currentLevel = new String[15][19];
-		int level = GamePanel.level;
 		String blockState;
-
-		if (level == 1) {
-			currentLevel = GamePanel.level1;
-		} else if (level == 2) {
-			currentLevel = GamePanel.level2;
-		} else if (level == 3) {
-			currentLevel = GamePanel.level3;
-		} else if (level == 4) {
-			currentLevel = GamePanel.level4;
-		} else if (level == 5) {
-			currentLevel = GamePanel.level5;
-		} else if (level == 6) {
-			currentLevel = GamePanel.level6;
-		} else if (level == 7) {
-			currentLevel = GamePanel.level7;
-		} else if (level == 8) {
-			currentLevel = GamePanel.level8;
-		} else if (level == 9) {
-			currentLevel = GamePanel.level9;
-		} else if (level == 10) {
-			currentLevel = GamePanel.level10;
-		}
-
+        
+        blockState = GamePanel.currentLevel[posY][posX];
+        if (blockState.equals("end")) {
+        	win = true;
+        }
+        
 		// right
 		try {
-			blockState = currentLevel[posX + 1][posY];
+			blockState = GamePanel.currentLevel[posY][posX + 1];
 			if (blockState.equals("wall") || blockState.equals("quick sand") || blockState.equals("start point")) {
 				canRight = false;
 			} else if (blockState.equals("sand") || blockState.equals("end point") || blockState.equals("wall")
@@ -66,7 +52,7 @@ public class Character {
 
 		// left
 		try {
-			blockState = currentLevel[posX - 1][posY];
+			blockState = GamePanel.currentLevel[posY][posX - 1];
 			if (blockState.equals("wall") || blockState.equals("quick sand") || blockState.equals("start point")) {
 				canLeft = false;
 			} else if (blockState.equals("sand") || blockState.equals("end point") || blockState.equals("wall")
@@ -87,7 +73,7 @@ public class Character {
 
 		// up
 		try {
-			blockState = currentLevel[posX][posY + 1];
+			blockState = GamePanel.currentLevel[posY + 1][posX];
 			if (blockState.equals("wall") || blockState.equals("quick sand") || blockState.equals("start point")) {
 				canUp = false;
 			} else if (blockState.equals("sand") || blockState.equals("end point") || blockState.equals("wall")
@@ -108,7 +94,7 @@ public class Character {
 
 		// down
 		try {
-			blockState = currentLevel[posX][posY - 1];
+			blockState = GamePanel.currentLevel[posY - 1][posX];
 			if (blockState.equals("wall") || blockState.equals("quick sand") || blockState.equals("start point")) {
 				canDown = false;
 			} else if (blockState.equals("sand") || blockState.equals("end point") || blockState.equals("wall")
@@ -126,6 +112,10 @@ public class Character {
 			blockState = "Edge";
 			canDown = false;
 		}
+		
+		if(!canUp && !canDown && !canLeft && !canRight) {
+			lose = true;
+		}
 	}
 
 	public void keyTyped(KeyEvent event) {
@@ -133,6 +123,7 @@ public class Character {
 		if (event.getKeyCode() == KeyEvent.VK_UP || event.getKeyCode() == KeyEvent.VK_W) {
 			if (canUp) {
 				posY = posY + 1;
+				System.out.println(posY);
 			}
 		} else if (event.getKeyCode() == KeyEvent.VK_DOWN || event.getKeyCode() == KeyEvent.VK_S) {
 			if (canDown) {
@@ -149,12 +140,12 @@ public class Character {
 		}
 	}
 
-	public void setPosX(int x) {
-
+	public static void setPosX(int x) {
+		posX = x;
 	}
 
-	public void setPosY(int y) {
-
+	public static void setPosY(int y) {
+		posY = y;
 	}
 
 	public int getPosX() {
