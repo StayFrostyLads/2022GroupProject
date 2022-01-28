@@ -10,14 +10,12 @@ public class BackgroundPanel extends JPanel {
     JLabel level;
     String levelText;
     public static JButton quit, title;
-    int x;
     
 	public BackgroundPanel() {
 		setLayout(null);
 		game = new GamePanel();
 		add(game);
-		x = 1;
-		levelText = "Level " + String.valueOf(x);
+		levelText = "Level " + String.valueOf(GamePanel.level);
 		level = new JLabel(levelText, JLabel.CENTER);
 		level.setFont(new Font("Garamond", Font.PLAIN, 30));
 		level.setBounds(380,10,200,30);
