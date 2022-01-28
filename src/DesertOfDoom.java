@@ -1,17 +1,18 @@
+package main;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.*;
-
 import panel.*;
+
 
 public class DesertOfDoom extends JFrame {
 	public JPanel cards, title, instruction, background, lose, win;
 
 	public DesertOfDoom() {
 		setTitle("Desert of Doom");
-		setSize(960, 853);
+		setSize(788,716);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setVisible(true);
 		
