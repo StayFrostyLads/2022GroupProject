@@ -32,6 +32,7 @@ public class DesertOfDoom extends JFrame {
 		add(cards);
 
 		cL.show(cards, "title");
+		revalidate();
 
 		
 		//Button Logic
@@ -62,7 +63,7 @@ public class DesertOfDoom extends JFrame {
 		});
 		BackgroundPanel.quit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				cL.show(cards, "background");
+				System.exit(0);
 			}
 		});
 		BackgroundPanel.title.addActionListener(new ActionListener() {
