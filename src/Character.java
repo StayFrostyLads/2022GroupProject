@@ -1,12 +1,14 @@
 package main;
 
 import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
 import javax.swing.ImageIcon;
 import javax.swing.JComponent;
 import javax.swing.JLabel;
 import panel.GamePanel;
 
-public class Character extends JLabel {
+public class Character extends JLabel implements KeyListener {
 	static int posX;
 	static int posY;
 	boolean canUp;
@@ -19,6 +21,7 @@ public class Character extends JLabel {
 		posX = X;
 		posY = Y;
 		setVisible(true);
+		addKeyListener(this);
 	}
 
 	public void checkSurroundings() {
@@ -128,14 +131,17 @@ public class Character extends JLabel {
 		} else if (event.getKeyCode() == KeyEvent.VK_DOWN || event.getKeyCode() == KeyEvent.VK_S) {
 			if (canDown) {
 				posY = posY - 1;
+				System.out.println(posY);
 			}
 		} else if (event.getKeyCode() == KeyEvent.VK_LEFT || event.getKeyCode() == KeyEvent.VK_A) {
 			if (canLeft) {
 				posX = posX - 1;
+				System.out.println(posX);
 			}
 		} else if (event.getKeyCode() == KeyEvent.VK_RIGHT || event.getKeyCode() == KeyEvent.VK_D) {
 			if (canRight) {
 				posX = posX + 1;
+				System.out.println(posX);
 			}
 		}
 	}
@@ -156,6 +162,15 @@ public class Character extends JLabel {
 	public int getPosY() {
 		int y = Character.posY;
 		return y;
+	}
+
+	public void keyPressed(KeyEvent e) {
+		
+	}
+
+	public void keyReleased(KeyEvent e) {
+		
+		
 	}
 
 }
