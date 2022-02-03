@@ -108,7 +108,7 @@ public class GamePanel extends JPanel {
 		if (type.equals("wall")) {
 			tile.setText("III");
 		} else if (type.equals("sand")) {
-			ImageIcon sand = new ImageIcon("./images/sand.png");
+			ImageIcon sand = new ImageIcon("./images/sand.jpg");
 			tile.setIcon(sand);
 		} else if (type.equals("quick sand")) {
 			ImageIcon quickSand = new ImageIcon("./images/spiral.png");
