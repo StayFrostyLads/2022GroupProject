@@ -1,6 +1,3 @@
-package panel;
-
-import main.Character;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
