@@ -164,13 +164,4 @@ public class Character extends JLabel {
 		return y;
 	}
 
-	public void keyPressed(KeyEvent e) {
-		
-	}
-
-	public void keyReleased(KeyEvent e) {
-		
-		
-	}
-
 }
