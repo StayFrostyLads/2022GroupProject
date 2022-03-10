@@ -8,7 +8,7 @@ import javax.swing.JComponent;
 import javax.swing.JLabel;
 import panel.GamePanel;
 
-public class Character extends JLabel implements KeyListener {
+public class Character extends JLabel {
 	static int posX;
 	static int posY;
 	boolean canUp;
