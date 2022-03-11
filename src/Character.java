@@ -1,12 +1,5 @@
-package main;
-
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-
 import javax.swing.ImageIcon;
-import javax.swing.JComponent;
 import javax.swing.JLabel;
-import panel.GamePanel;
 
 public class Character extends JLabel {
 	static int posX;
@@ -17,11 +10,10 @@ public class Character extends JLabel {
 	boolean canRight;
 	public static boolean lose, win;
 
-	public Character(int X, int Y) {
-		posX = X;
-		posY = Y;
+	public Character() {
 		setVisible(true);
-		addKeyListener(this);
+		ImageIcon a = new ImageIcon("./images/character.png");
+		setIcon(a);
 	}
 
 	public void checkSurroundings() {
@@ -121,30 +113,6 @@ public class Character extends JLabel {
 		}
 	}
 
-	public void keyTyped(KeyEvent event) {
-		checkSurroundings();
-		if (event.getKeyCode() == KeyEvent.VK_UP || event.getKeyCode() == KeyEvent.VK_W) {
-			if (canUp) {
-				posY = posY + 1;
-				System.out.println(posY);
-			}
-		} else if (event.getKeyCode() == KeyEvent.VK_DOWN || event.getKeyCode() == KeyEvent.VK_S) {
-			if (canDown) {
-				posY = posY - 1;
-				System.out.println(posY);
-			}
-		} else if (event.getKeyCode() == KeyEvent.VK_LEFT || event.getKeyCode() == KeyEvent.VK_A) {
-			if (canLeft) {
-				posX = posX - 1;
-				System.out.println(posX);
-			}
-		} else if (event.getKeyCode() == KeyEvent.VK_RIGHT || event.getKeyCode() == KeyEvent.VK_D) {
-			if (canRight) {
-				posX = posX + 1;
-				System.out.println(posX);
-			}
-		}
-	}
 
 	public static void setPosX(int x) {
 		posX = x;
@@ -155,12 +123,12 @@ public class Character extends JLabel {
 	}
 
 	public int getPosX() {
-		int x = Character.posX;
+		int x = posX;
 		return x;
 	}
 
 	public int getPosY() {
-		int y = Character.posY;
+		int y = posY;
 		return y;
 	}
 
