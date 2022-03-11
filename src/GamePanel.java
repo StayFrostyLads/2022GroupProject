@@ -4,13 +4,15 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
-public class GamePanel extends JPanel {
+public class GamePanel extends JPanel implements KeyListener {
 	public static int level;
 	public static String[][] level2, level3, level4, level5, level6, level7, level8, level9, level10;
-	public static JLabel character;
 	public static String[][] currentLevel;
 	boolean play;
+	Character character;
+	String characterOnBlock;
 
 	// Level example from thin ice level 1 --> for testing as no levels made yet
 	public static String[][] level1 = {
@@ -47,13 +49,14 @@ public class GamePanel extends JPanel {
 
 	GamePanel() {
 		level = 1;
-		character = new Character(0, 0);
-		character.setIcon(new ImageIcon("./images/character.png"));
+		characterOnBlock = "start";
+		setFocusable(true);
+		addKeyListener(this);
 		setLayout(new GridLayout(15, 19));
 		setSize(762, 602);
 		setLocation(5, 70);
 		setBorder(BorderFactory.createLineBorder(Color.black));
-		
+		character = new Character();
 		setLevel(1);
 		initializeLevel();
 
@@ -63,6 +66,40 @@ public class GamePanel extends JPanel {
 		level = l;
 	}
 
+//	public void updateCurrentLevel(String directionMoved) {
+//		removeAll();
+//		
+//		if (directionMoved.equals("right")) {
+//			currentLevel[Character.posY][Character.posX] = "character";
+//			currentLevel[Character.posY][Character.posX -1] = characterOnBlock;
+//		} else if (directionMoved.equals("left")) {
+//			currentLevel[Character.posY][Character.posX] = "character";
+//			currentLevel[Character.posY][Character.posX + 1] = characterOnBlock;
+//		} else if (directionMoved.equals("up")) {
+//			currentLevel[Character.posY][Character.posX] = "character";
+//			currentLevel[Character.posY][Character.posX - 1] = characterOnBlock;
+//		} else if (directionMoved.equals("down")) {
+//			currentLevel[Character.posY][Character.posX] = "character";
+//			currentLevel[Character.posY][Character.posX + 1] = characterOnBlock;
+//		} else {
+//			System.out.println("Error: Failed to render level after movement. Character was moving " + directionMoved);
+//		}
+//		
+//		
+//		for (int i = 0; i < 15; i++) {
+//			for (int j = 0; j < 19; j++) {
+//				if (currentLevel[i][j].equals("character")) {
+//					add(character);
+//					Character.setPosX(j);
+//					Character.setPosY(i);
+//				} else {
+//					add(createBlock(currentLevel[i][j]));
+//				}
+//			}
+//
+//		}
+//	}
+	
 	public void initializeLevel() {
 		removeAll();
 
@@ -92,6 +129,8 @@ public class GamePanel extends JPanel {
 			for (int j = 0; j < 19; j++) {
 				if (currentLevel[i][j].equals("start")) {
 					add(character);
+					Character.setPosX(j);
+					Character.setPosY(i);
 				} else {
 					add(createBlock(currentLevel[i][j]));
 				}
@@ -113,7 +152,7 @@ public class GamePanel extends JPanel {
 		} else if (type.equals("end")) {
 			tile.setText("End");
 		} else if (type.equals("start")) {
-			tile.setText("Start");
+			tile.setText("Srt");
 		} else if (type.equals("money")) {
 			tile.setText("$$$");
 		} else if (type.equals("portal")) {
@@ -132,6 +171,45 @@ public class GamePanel extends JPanel {
 		}
 
 		return tile;
+	}
+	
+	public void keyTyped(KeyEvent event) {
+		
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		
+	}
+
+	@Override
+	public void keyReleased(KeyEvent event) {
+		character.checkSurroundings();
+		if (event.getKeyCode() == KeyEvent.VK_UP || event.getKeyCode() == KeyEvent.VK_W) {
+			if (character.canUp) {
+				Character.posY = Character.posY + 1;
+				System.out.println(Character.posY);
+				//updateCurrentLevel("up");
+			}
+		} else if (event.getKeyCode() == KeyEvent.VK_DOWN || event.getKeyCode() == KeyEvent.VK_S) {
+			if (character.canDown) {
+				Character.posY = Character.posY - 1;
+				System.out.println(Character.posY);
+				//updateCurrentLevel("down");
+			}
+		} else if (event.getKeyCode() == KeyEvent.VK_LEFT || event.getKeyCode() == KeyEvent.VK_A) {
+			if (character.canLeft) {
+				Character.posX = Character.posX - 1;
+				System.out.println(Character.posX);
+				//updateCurrentLevel("left");
+			}
+		} else if (event.getKeyCode() == KeyEvent.VK_RIGHT || event.getKeyCode() == KeyEvent.VK_D) {
+			if (character.canRight) {
+				Character.posX = Character.posX + 1;
+				System.out.println(Character.posX);
+				//updateCurrentLevel("right");
+			}
+		}
 	}
 
 }
