@@ -6,10 +6,15 @@ import javax.swing.*;
 
 
 public class DesertOfDoom extends JFrame {
-	private JPanel cards, title, instruction, background, lose, win;
-	private JPanel gamePanel;
-	CardLayout cL = new CardLayout();
-	boolean play = false;
+	private static JPanel cards;
+	private JPanel title;
+	private JPanel instruction;
+	private JPanel background;
+	private JPanel lose;
+	private JPanel win;
+	private static JPanel gamePanel;
+	static CardLayout cL = new CardLayout();
+	static Object waitObject = new Object();
 	
 	public DesertOfDoom() {
 		setTitle("Desert of Doom");
@@ -24,7 +29,7 @@ public class DesertOfDoom extends JFrame {
 		background = new BackgroundPanel();
 		lose = new LosePanel();
 		win = new WinPanel();
-		gamePanel = new GamePanel();
+		gamePanel = new GamePanel(1);
 		
 		cards.setFocusable(false);
 		background.setFocusable(false);
@@ -49,7 +54,6 @@ public class DesertOfDoom extends JFrame {
 		TitlePanel.instructions.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				cL.show(cards, "instruction");
-				play = false;
 			}
 		});
 		TitlePanel.quit.addActionListener(new ActionListener() {
@@ -76,18 +80,51 @@ public class DesertOfDoom extends JFrame {
 		BackgroundPanel.title.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				cL.show(cards,  "title");
-				play = false;
 			}
 		});
 		
 	}
 	
-	private void showScreen(String a) {
+	private static void showScreen(String a) {
 		cL.show(cards, a);
 	}
 	
 	public static void main(String[] args) {
 		DesertOfDoom game = new DesertOfDoom();
+		synchronized (waitObject) {
+			try {
+				waitObject.wait();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		gamePanel = new GamePanel(2);
+		synchronized (waitObject) {
+			try {
+				waitObject.wait();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		gamePanel = new GamePanel(3);
+		synchronized (waitObject) {
+			try {
+				waitObject.wait();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		gamePanel = new GamePanel(4);
+		synchronized (waitObject) {
+			try {
+				waitObject.wait();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		gamePanel = new GamePanel(5);
+		
+		showScreen("win");
 	}
 	
 }
