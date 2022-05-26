@@ -110,6 +110,38 @@ public class GamePanel extends JPanel implements KeyListener {
 							"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" } };
+	
+	public static String[][] level10 = {
+			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
+					"blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall" },
+			{ "blank", "wall", "wall", "wall", "wall", "wall", "blank", "blank", "blank", "blank", "blank",
+					"blank", "wall", "portal", "money", "money", "money", "money", "wall" },
+			{ "blank", "wall", "hardSand", "hardSand", "hardSand", "wall", "blank", "blank", "blank", "blank", "blank",
+					"blank", "wall", "money", "money", "money", "money", "money", "wall" },
+			{ "blank", "wall", "hardSand", "wall", "portal", "wall", "blank", "blank", "blank", "blank", "blank",
+					"blank", "wall", "money", "money", "money", "money", "money", "wall" },
+			{ "blank", "wall", "hardSand", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
+					"wall", "wall", "money", "money", "money", "money", "money", "wall" },
+			{ "wall", "wall", "lock", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
+					"sand", "key", "wall", "wall", "wall", "wall", "wall", "wall" },
+			{ "wall", "end", "sand", "wall", "wall", "wall", "wall", "wall", "sand", "sand", "wall",
+					"wall", "sand", "wall", "blank", "blank", "blank", "blank", "blank" },
+			{ "wall", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "wall",
+					"wall", "sand", "wall", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall", "sand", "sand",
+					"sand", "sand", "wall", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall", "sand", "sand",
+					"hardSand", "sand", "wall", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "wall",
+					"wall", "blank", "blank", "blank", "blank", "blank" },
+			{ "wall", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "sand", "sand", "wall",
+					"blank", "blank", "blank", "blank", "blank", "blank" },
+			{ "wall", "character", "hardSand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "wall",
+					"blank", "blank", "blank", "blank", "blank", "blank" },
+			{ "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
+					"wall", "wall", "blank", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
+					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" } };
 
 	GamePanel() {
 		level = 1;
