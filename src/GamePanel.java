@@ -7,17 +7,14 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class GamePanel extends JPanel implements KeyListener {
-	public static int level;
-	public static String[][] currentLevel;
+	public static int level = 1;
 	public static String[][] level6, level7, level8, level9;
+	public static String[][] currentLevel = new String[15][19];
 	boolean play;
 	Character character;
 	String characterOnBlock;
-	boolean move = true;
 
-
-	// Level example from thin ice level 1 --> for testing as no levels made yet
-	public static String[][] level1 = {
+	final String[][] level1 = {
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
@@ -48,7 +45,8 @@ public class GamePanel extends JPanel implements KeyListener {
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" } };
-	public static String[][] level2 = {
+	
+	final String[][] level2 = {
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
@@ -79,7 +77,8 @@ public class GamePanel extends JPanel implements KeyListener {
 					"wall", "wall", "wall", "wall", "wall", "wall", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" } };
-	public static String[][] level3 = {
+	
+	final String[][] level3 = {
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "wall",
@@ -110,9 +109,8 @@ public class GamePanel extends JPanel implements KeyListener {
 					"wall", "wall", "wall", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" } };
-
-
-public static String[][] level4 = {
+	
+	final String[][] level4 = {
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
   //2
@@ -157,7 +155,8 @@ public static String[][] level4 = {
   //15
 			{ "blank", "wall", "wall", "wall", "wall", "wall", "wall", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" } };
-	public static String[][] level5 = {
+	
+	final String[][] level5 = {
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
@@ -189,7 +188,7 @@ public static String[][] level4 = {
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" } };
 	
-	public static String[][] level10 = {
+	final String[][] level10 = {
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall" },
 			{ "blank", "wall", "wall", "wall", "wall", "wall", "blank", "blank", "blank", "blank", "blank",
@@ -221,8 +220,8 @@ public static String[][] level4 = {
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" } };
 
-	GamePanel() {
-		level = 1;
+	GamePanel(int l) {
+		level = l;
 		characterOnBlock = "sand";
 		setFocusable(true);
 		addKeyListener(this);
@@ -231,51 +230,97 @@ public static String[][] level4 = {
 		setLocation(5, 70);
 		setBorder(BorderFactory.createLineBorder(Color.black));
 		character = new Character();
-		setLevel(5);
 		initializeLevel();
-
 	}
-
-	public void setLevel(int l) {
-		level = l;
+	
+	public String findCharacterOnBlock() {
+		String a = "sand";
+		if (level == 1) {
+			a = level1[Character.posY][Character.posX];
+		} else if (level == 2) {
+			a = level2[Character.posY][Character.posX];
+		} else if (level == 3) {
+			a = level3[Character.posY][Character.posX];
+		} else if (level == 4) {
+			a = level4[Character.posY][Character.posX];
+		} else if (level == 5) {
+			a = level5[Character.posY][Character.posX];
+		} else if (level == 6) {
+			
+		} else if (level == 7) {
+			
+		} else if (level == 8) {
+			
+		} else if (level == 9) {
+			
+		} else if (level == 10) {
+			a = level10[Character.posY][Character.posX];
+		}
+		return a;
 	}
 
 	public void updateCurrentLevel(String directionMoved) {
 		removeAll();
 		if (directionMoved.equals("right")) {
 			currentLevel[Character.posY][Character.posX] = "character";
+			if (characterOnBlock.equals("hardSand")) {
+				characterOnBlock = "sand";
+			} else if (characterOnBlock.equals("sand")) {
+				characterOnBlock = "quickSand";
+			}
 			currentLevel[Character.posY][Character.posX - 1] = characterOnBlock;
-			characterOnBlock = level1[Character.posY][Character.posX+1];
-			System.out.println(characterOnBlock);
-			if (characterOnBlock.equals("sand")) {
-				currentLevel[Character.posY][Character.posX - 1] = "quick sand";
+			characterOnBlock = findCharacterOnBlock();
+			if (characterOnBlock.equals("end")) {
+				characterOnBlock = "sand";
+				synchronized (DesertOfDoom.waitObject) {
+					DesertOfDoom.waitObject.notify();
+				}
 			}
 		} else if (directionMoved.equals("left")) {
 			currentLevel[Character.posY][Character.posX] = "character";
+			if (characterOnBlock.equals("hardSand")) {
+				characterOnBlock = "sand";
+			} else if (characterOnBlock.equals("sand")) {
+				characterOnBlock = "quickSand";
+			}
 			currentLevel[Character.posY][Character.posX + 1] = characterOnBlock;
-			characterOnBlock = level1[Character.posY][Character.posX-1];
-			System.out.println(characterOnBlock);
-			if (characterOnBlock.equals("sand")) {
-				currentLevel[Character.posY][Character.posX + 1] = "quick sand";
+			characterOnBlock = findCharacterOnBlock();
+			if (characterOnBlock.equals("end")) {
+				characterOnBlock = "sand";
+				synchronized (DesertOfDoom.waitObject) {
+					DesertOfDoom.waitObject.notify();
+				}
 			}
 		} else if (directionMoved.equals("up")) {
 			currentLevel[Character.posY][Character.posX] = "character";
-			currentLevel[Character.posY][Character.posX - 1] = characterOnBlock;
-			characterOnBlock = level1[Character.posY+1][Character.posX];
-			System.out.println(characterOnBlock);
-			if (characterOnBlock.equals("sand")) {
-				currentLevel[Character.posY - 1][Character.posX] = "quick sand";
+			if (characterOnBlock.equals("hardSand")) {
+				characterOnBlock = "sand";
+			} else if (characterOnBlock.equals("sand")) {
+				characterOnBlock = "quickSand";
+			}
+			currentLevel[Character.posY + 1][Character.posX] = characterOnBlock;
+			characterOnBlock = findCharacterOnBlock();
+			if (characterOnBlock.equals("end")) {
+				characterOnBlock = "sand";
+				synchronized (DesertOfDoom.waitObject) {
+					DesertOfDoom.waitObject.notify();
+				}
 			}
 		} else if (directionMoved.equals("down")) {
 			currentLevel[Character.posY][Character.posX] = "character";
-			currentLevel[Character.posY][Character.posX + 1] = characterOnBlock;
-			characterOnBlock = level1[Character.posY-1][Character.posX];
-			System.out.println(characterOnBlock);
-			if (characterOnBlock.equals("sand")) {
-				currentLevel[Character.posY + 1][Character.posX] = "quick sand";
+			if (characterOnBlock.equals("hardSand")) {
+				characterOnBlock = "sand";
+			} else if (characterOnBlock.equals("sand")) {
+				characterOnBlock = "quickSand";
 			}
-		} else {
-			System.out.println("Error: Failed to render level after movement. Character was moving " + directionMoved);
+			currentLevel[Character.posY - 1][Character.posX] = characterOnBlock;
+			characterOnBlock = findCharacterOnBlock();
+			if (characterOnBlock.equals("end")) {
+				characterOnBlock = "sand";
+				synchronized (DesertOfDoom.waitObject) {
+					DesertOfDoom.waitObject.notify();
+				}
+			}
 		}
 
 		for (int i = 0; i < 15; i++) {
@@ -290,15 +335,32 @@ public static String[][] level4 = {
 			}
 
 		}
+//		for (int i = 0; i < 19; i++) {
+//			System.out.print(currentLevel[11][i] + " ");
+//		}
+//		System.out.println();
+//		for (int i = 0; i < 19; i++) {
+//			System.out.print(level1[11][i] + " ");
+//		}
 	}
 
 	public void initializeLevel() {
 		removeAll();
 
 		if (level == 1) {
-			currentLevel = level1;
+			for (int i = 0; i < 15; i++) {
+				for (int j = 0; j < 19; j++) {
+					currentLevel[i][j] = level1[i][j];
+				}
+
+			}
 		} else if (level == 2) {
-			currentLevel = level2;
+			for (int i = 0; i < 15; i++) {
+				for (int j = 0; j < 19; j++) {
+					currentLevel[i][j] = level2[i][j];
+				}
+
+			}
 		} else if (level == 3) {
 			currentLevel = level3;
 		} else if (level == 4) {
@@ -339,19 +401,17 @@ public static String[][] level4 = {
 		} else if (type.equals("sand")) {
 			ImageIcon sand = new ImageIcon("./images/sand.jpg");
 			tile.setIcon(sand);
-		} else if (type.equals("spiral")) {
-			ImageIcon quickSand = new ImageIcon("./images/spiral.png");
+		} else if (type.equals("quickSand")) {
+			ImageIcon quickSand = new ImageIcon("./images/quickSand.png");
 			tile.setIcon(quickSand);
 		} else if (type.equals("end")) {
 			ImageIcon end = new ImageIcon("./images/end.png");
 			tile.setIcon(end);
-		} else if (type.equals("start")) {
-			tile.setText("Srt");
 		} else if (type.equals("money")) {
 			ImageIcon money = new ImageIcon("./images/money.png");
 			tile.setIcon(money);
 		} else if (type.equals("portal")) {
-			ImageIcon portal = new ImageIcon("./images/portal.png");
+			ImageIcon portal = new ImageIcon("./images/portal.jpg");
 			tile.setIcon(portal);
 		} else if (type.equals("hardSand")) {
 			ImageIcon hardSand = new ImageIcon("./images/hardSand.png");
@@ -363,7 +423,7 @@ public static String[][] level4 = {
 			ImageIcon blank = new ImageIcon("./images/blank.png");
 			tile.setIcon(blank);
 		} else if (type.equals("lock")) {
-			ImageIcon lock = new ImageIcon("./images/lock.png");
+			ImageIcon lock = new ImageIcon("./images/Lock.png");
 			tile.setIcon(lock);
 		} else {
 			tile.setText("Error");
@@ -387,26 +447,22 @@ public static String[][] level4 = {
 		character.checkSurroundings();
 		if (event.getKeyCode() == KeyEvent.VK_UP || event.getKeyCode() == KeyEvent.VK_W) {
 			if (character.canUp) {
-				Character.posY = Character.posY + 1;
-				System.out.println(Character.posY);
+				Character.posY = Character.posY - 1;
 				this.updateCurrentLevel("up");
 			}
 		} else if (event.getKeyCode() == KeyEvent.VK_DOWN || event.getKeyCode() == KeyEvent.VK_S) {
 			if (character.canDown) {
-				Character.posY = Character.posY - 1;
-				System.out.println(Character.posY);
+				Character.posY = Character.posY + 1;
 				this.updateCurrentLevel("down");
 			}
 		} else if (event.getKeyCode() == KeyEvent.VK_LEFT || event.getKeyCode() == KeyEvent.VK_A) {
 			if (character.canLeft) {
 				Character.posX = Character.posX - 1;
-				System.out.println(Character.posX);
 				this.updateCurrentLevel("left");
 			}
 		} else if (event.getKeyCode() == KeyEvent.VK_RIGHT || event.getKeyCode() == KeyEvent.VK_D) {
 			if (character.canRight) {
 				Character.posX = Character.posX + 1;
-				System.out.println(Character.posX);
 				this.updateCurrentLevel("right");
 			}
 		}
