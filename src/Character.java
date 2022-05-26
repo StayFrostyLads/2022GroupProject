@@ -12,9 +12,19 @@ public class Character extends JLabel {
 
 	public Character() {
 		setVisible(true);
-		ImageIcon a = new ImageIcon("./images/character.png");
+		ImageIcon a = new ImageIcon("./images/indybuff-r.png");
 		setIcon(a);
 	}
+	
+    public void changeDirection(boolean right) {
+    	ImageIcon a;
+    	if (right) {
+    		a = new ImageIcon("./images/indybuff-r");
+    	} else {
+    		a = new ImageIcon("./images/indybuff-l");
+    	}
+    	setIcon(a);
+    }
 
 	public void checkSurroundings() {
 		String blockState;
@@ -27,10 +37,10 @@ public class Character extends JLabel {
 		// right
 		try {
 			blockState = GamePanel.currentLevel[posY][posX + 1];
-			if (blockState.equals("wall") || blockState.equals("quick sand") || blockState.equals("start point")) {
+			if (blockState.equals("wall") || blockState.equals("quickSand")) {
 				canRight = false;
-			} else if (blockState.equals("sand") || blockState.equals("end point") || blockState.equals("wall")
-					|| blockState.equals("money") || blockState.equals("portal") || blockState.equals("hard sand")
+			} else if (blockState.equals("sand") || blockState.equals("end") || blockState.equals("wall")
+					|| blockState.equals("money") || blockState.equals("portal") || blockState.equals("hardSand")
 					|| blockState.equals("key")) {
 				canRight = true;
 			} else {
@@ -48,10 +58,10 @@ public class Character extends JLabel {
 		// left
 		try {
 			blockState = GamePanel.currentLevel[posY][posX - 1];
-			if (blockState.equals("wall") || blockState.equals("quick sand") || blockState.equals("start point")) {
+			if (blockState.equals("wall") || blockState.equals("quickSand")) {
 				canLeft = false;
-			} else if (blockState.equals("sand") || blockState.equals("end point") || blockState.equals("wall")
-					|| blockState.equals("money") || blockState.equals("portal") || blockState.equals("hard sand")
+			} else if (blockState.equals("sand") || blockState.equals("end") || blockState.equals("wall")
+					|| blockState.equals("money") || blockState.equals("portal") || blockState.equals("hardSand")
 					|| blockState.equals("key")) {
 				canLeft = true;
 			} else {
@@ -68,11 +78,11 @@ public class Character extends JLabel {
 
 		// up
 		try {
-			blockState = GamePanel.currentLevel[posY + 1][posX];
-			if (blockState.equals("wall") || blockState.equals("quick sand") || blockState.equals("start point")) {
+			blockState = GamePanel.currentLevel[posY - 1][posX];
+			if (blockState.equals("wall") || blockState.equals("quickSand")) {
 				canUp = false;
-			} else if (blockState.equals("sand") || blockState.equals("end point") || blockState.equals("wall")
-					|| blockState.equals("money") || blockState.equals("portal") || blockState.equals("hard sand")
+			} else if (blockState.equals("sand") || blockState.equals("end") || blockState.equals("wall")
+					|| blockState.equals("money") || blockState.equals("portal") || blockState.equals("hardSand")
 					|| blockState.equals("key")) {
 				canUp = true;
 			} else {
@@ -89,11 +99,11 @@ public class Character extends JLabel {
 
 		// down
 		try {
-			blockState = GamePanel.currentLevel[posY - 1][posX];
-			if (blockState.equals("wall") || blockState.equals("quick sand") || blockState.equals("start point")) {
+			blockState = GamePanel.currentLevel[posY + 1][posX];
+			if (blockState.equals("wall") || blockState.equals("quickSand")) {
 				canDown = false;
-			} else if (blockState.equals("sand") || blockState.equals("end point") || blockState.equals("wall")
-					|| blockState.equals("money") || blockState.equals("portal") || blockState.equals("hard sand")
+			} else if (blockState.equals("sand") || blockState.equals("end") || blockState.equals("wall")
+					|| blockState.equals("money") || blockState.equals("portal") || blockState.equals("hardSand")
 					|| blockState.equals("key")) {
 				canDown = true;
 			} else {
