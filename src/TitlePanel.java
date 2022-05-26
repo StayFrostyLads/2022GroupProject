@@ -9,7 +9,8 @@ public class TitlePanel extends JPanel {
 	public TitlePanel() {
 		setLayout(null);
 		JLabel title = new JLabel("Desert of Doom"); //Will be image in future - Stacker just say Desert of Doom in good font
-		title.setBounds(50,50,200,50);
+		title.setBounds(290,50,200,50);
+		//MAKE FONT SIZE BIGGER
 		add(title);
 		
 		start = new JButton("Start"); // JButtons and labels can be images, so we can design good images so it looks good
@@ -21,6 +22,7 @@ public class TitlePanel extends JPanel {
 		quit = new JButton("Quit");
 		quit.setBackground(Color.RED);
 		quit.setBounds(540,250,200,250);
+		//if you can make the words bigger do that
 		
 		setBackground(Color.ORANGE);
 		add(start);
