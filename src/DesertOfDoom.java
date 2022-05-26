@@ -123,7 +123,53 @@ public class DesertOfDoom extends JFrame {
 			}
 		}
 		gamePanel = new GamePanel(5);
-		
+		synchronized (waitObject) {
+			try {
+				waitObject.wait();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		gamePanel = new GamePanel(6);
+		synchronized (waitObject) {
+			try {
+				waitObject.wait();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		gamePanel = new GamePanel(7);
+		synchronized (waitObject) {
+			try {
+				waitObject.wait();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		gamePanel = new GamePanel(8);
+		synchronized (waitObject) {
+			try {
+				waitObject.wait();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		gamePanel = new GamePanel(9);
+		synchronized (waitObject) {
+			try {
+				waitObject.wait();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		gamePanel = new GamePanel(10);
+		synchronized (waitObject) {
+			try {
+				waitObject.wait();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
 		showScreen("win");
 	}
 	
