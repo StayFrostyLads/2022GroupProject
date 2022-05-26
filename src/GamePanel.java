@@ -8,7 +8,6 @@ import java.awt.event.KeyListener;
 
 public class GamePanel extends JPanel implements KeyListener {
 	public static int level;
-	public static String[][] level3, level4, level6, level7, level8, level9, level10;
 	public static String[][] currentLevel;
 	boolean play;
 	Character character;
