@@ -8,43 +8,106 @@ import java.awt.event.KeyListener;
 
 public class GamePanel extends JPanel implements KeyListener {
 	public static int level;
-	public static String[][] level2, level3, level4, level5, level6, level7, level8, level9, level10;
+	public static String[][] level3, level4, level6, level7, level8, level9, level10;
 	public static String[][] currentLevel;
 	boolean play;
 	Character character;
 	String characterOnBlock;
 	boolean move = true;
 
+
 	// Level example from thin ice level 1 --> for testing as no levels made yet
 	public static String[][] level1 = {
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
+					"blank", "wall", "wall", "wall", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
+					"wall", "wall", "end", "wall", "wall", "wall", "blank", "blank" },
+			{ "blank", "blank", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
+						"sand", "sand", "sand", "sand", "sand", "wall", "blank", "blank" },
+			{ "blank", "blank", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
+					"sand", "sand", "sand", "sand", "sand", "wall", "blank", "blank" },
+			{ "blank", "blank", "wall", "character", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
+						"sand", "sand", "sand", "sand", "sand", "wall", "blank", "blank" },
+			{ "blank", "blank", "wall", "wall", "wall", "wall", "sand", "sand", "wall", "wall", "wall",
+					"wall", "wall", "wall", "wall", "wall", "wall", "blank", "blank" },
+			{ "blank", "blank", "blank", "blank", "blank", "wall", "wall", "wall", "wall", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
-					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
+						"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
+							"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
+								"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
-					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
+					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" } };
+	public static String[][] level2 = {
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
-					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
+						"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
+							"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
+						"wall", "wall", "wall", "wall", "wall", "wall", "blank", "blank" },
+			{ "blank", "wall", "wall", "sand", "sand", "sand", "wall", "wall", "wall", "wall", "wall",
+					"wall", "sand", "sand", "sand", "sand", "wall", "blank", "blank" },
+			{ "blank", "wall", "sand", "hardSand", "sand", "sand", "wall", "wall", "wall", "wall", "wall",
+						"wall", "sand", "sand", "sand", "sand", "wall", "blank", "blank" },
+			{ "blank", "wall", "sand", "sand", "sand", "sand", "wall", "wall", "wall", "wall", "wall",
+							"wall", "sand", "sand", "sand", "sand", "wall", "blank", "blank" },
+			{ "blank", "wall", "sand", "sand", "sand", "sand", "wall", "wall", "wall", "wall", "end",
+								"sand", "hardSand", "sand", "sand", "sand", "wall", "wall", "wall" },
+			{ "blank", "wall", "sand", "sand", "sand", "sand", "wall", "wall", "wall", "wall", "wall",
+									"wall", "sand", "sand", "sand", "sand", "sand", "sand", "wall" },
+			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
+										"sand", "sand", "sand", "sand", "sand", "sand", "sand", "wall" },
+			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
+											"sand", "sand", "sand", "sand", "sand", "sand", "sand", "wall" },
+			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
+												"sand", "sand", "sand", "sand", "hardSand", "sand", "sand", "wall" },
+			{ "blank", "wall", "character", "wall", "wall", "wall", "wall", "wall", "wall", "sand", "sand",
+								"sand", "sand", "sand", "sand", "sand", "wall", "wall", "wall" },
+			{ "blank", "wall", "wall", "wall", "blank", "blank", "blank", "blank", "blank", "wall", "wall",
+					"wall", "wall", "wall", "wall", "wall", "wall", "blank", "blank" },
+			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
+					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" } };
+	public static String[][] level5 = {
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
-			{ "blank", "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
-					"wall", "wall", "wall", "wall", "blank", "blank" },
-			{ "blank", "blank", "wall", "end", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
-					"sand", "sand", "character", "wall", "blank", "blank" },
-			{ "blank", "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
-					"wall", "wall", "wall", "wall", "blank", "blank" },
+			{ "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
+						"wall", "wall", "wall", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "wall",
+							"wall", "end", "wall", "wall", "wall", "wall", "wall", "blank" },
+			{ "blank", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall", "sand", "wall",
+						"wall", "sand", "wall", "key", "sand", "money", "wall", "blank" },
+			{ "blank", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall", "sand", "wall",
+						"wall", "lock", "wall", "sand", "wall", "sand", "wall", "blank" },
+			{ "blank", "wall", "sand", "sand", "wall", "wall", "wall", "wall", "wall", "sand", "sand",
+						"sand", "hardSand", "hardSand", "hardSand", "sand", "sand", "wall", "blank" },
+			{ "blank", "wall", "wall", "hardSand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
+							"sand", "sand", "sand", "wall", "wall", "wall", "wall", "blank" },
+			{ "blank", "wall", "wall", "hardSand", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
+								"wall", "sand", "sand", "wall", "blank", "blank", "blank", "blank" },
+			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
+									"sand", "sand", "sand", "wall", "wall", "wall", "blank", "blank" },
+			{ "blank", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
+										"wall", "wall", "sand", "sand", "character", "wall", "blank", "blank" },
+			{ "blank", "wall", "sand", "sand", "money", "sand", "sand", "sand", "sand", "sand", "sand",
+											"sand", "sand", "sand", "wall", "wall", "wall", "blank", "blank" },
+			{ "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
+										"wall", "wall", "wall", "wall", "blank", "blank", "blank", "blank" },
+			{ "blank", "wall", "character", "wall", "wall", "wall", "wall", "wall", "wall", "sand", "sand",
+								"sand", "sand", "sand", "sand", "sand", "wall", "wall", "wall" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
-					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
+							"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" } };
 
@@ -58,7 +121,7 @@ public class GamePanel extends JPanel implements KeyListener {
 		setLocation(5, 70);
 		setBorder(BorderFactory.createLineBorder(Color.black));
 		character = new Character();
-		setLevel(1);
+		setLevel(5);
 		initializeLevel();
 
 	}
@@ -161,29 +224,37 @@ public class GamePanel extends JPanel implements KeyListener {
 	private JLabel createBlock(String type) {
 		JLabel tile = new JLabel();
 		if (type.equals("wall")) {
-			tile.setText("III");
+			ImageIcon wall = new ImageIcon("./images/wall.png");
+			tile.setIcon(wall);
 		} else if (type.equals("sand")) {
 			ImageIcon sand = new ImageIcon("./images/sand.jpg");
 			tile.setIcon(sand);
-		} else if (type.equals("quick sand")) {
+		} else if (type.equals("spiral")) {
 			ImageIcon quickSand = new ImageIcon("./images/spiral.png");
 			tile.setIcon(quickSand);
 		} else if (type.equals("end")) {
-			tile.setText("End");
+			ImageIcon end = new ImageIcon("./images/end.png");
+			tile.setIcon(end);
 		} else if (type.equals("start")) {
 			tile.setText("Srt");
 		} else if (type.equals("money")) {
-			tile.setText("$$$");
+			ImageIcon money = new ImageIcon("./images/money.png");
+			tile.setIcon(money);
 		} else if (type.equals("portal")) {
-			tile.setText("port");
-		} else if (type.equals("hard sand")) {
-			ImageIcon hardSand = new ImageIcon("./images/sand brick.png");
+			ImageIcon portal = new ImageIcon("./images/portal.png");
+			tile.setIcon(portal);
+		} else if (type.equals("hardSand")) {
+			ImageIcon hardSand = new ImageIcon("./images/hardSand.png");
 			tile.setIcon(hardSand);
 		} else if (type.equals("key")) {
 			ImageIcon key = new ImageIcon("./images/key.png");
 			tile.setIcon(key);
 		} else if (type.equals("blank")) {
-			tile.setText(".");
+			ImageIcon blank = new ImageIcon("./images/blank.png");
+			tile.setIcon(blank);
+		} else if (type.equals("lock")) {
+			ImageIcon lock = new ImageIcon("./images/lock.png");
+			tile.setIcon(lock);
 		} else {
 			tile.setText("Error");
 			System.out.println("Error: '" + type + "' block unable to render");
