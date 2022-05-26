@@ -6,7 +6,8 @@ import javax.swing.*;
 
 
 public class DesertOfDoom extends JFrame {
-	private JPanel cards, title, instruction, background, lose, win, gamePanel;
+	private JPanel cards, title, instruction, background, lose, win;
+	private JPanel gamePanel;
 	CardLayout cL = new CardLayout();
 	boolean play = false;
 	
@@ -87,7 +88,6 @@ public class DesertOfDoom extends JFrame {
 	
 	public static void main(String[] args) {
 		DesertOfDoom game = new DesertOfDoom();
-		
 	}
 	
 }
