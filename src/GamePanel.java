@@ -79,6 +79,84 @@ public class GamePanel extends JPanel implements KeyListener {
 					"wall", "wall", "wall", "wall", "wall", "wall", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" } };
+	public static String[][] level3 = {
+			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
+					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "wall",
+					"wall", "wall", "wall", "wall", "wall", "wall", "blank", "blank" },
+			{ "blank", "wall", "wall", "wall", "wall", "blank", "blank", "blank", "blank", "blank", "wall",
+					"sand", "money", "sand", "money", "sand", "wall", "blank", "blank" },
+			{ "blank", "wall", "end", "sand", "wall", "blank", "blank", "blank", "blank", "blank", "wall",
+					"sand", "wall", "wall", "wall", "sand", "wall", "blank", "blank" },
+			{ "blank", "wall", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
+					"sand", "wall", "wall", "wall", "sand", "wall", "blank", "blank" },
+			{ "wall", "wall", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
+					"sand", "sand", "sand", "sand", "sand", "wall", "blank", "blank" },
+			{ "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
+					"sand", "sand", "wall", "wall", "wall", "wall", "blank", "blank" },
+			{ "wall", "sand", "sand", "sand", "sand", "wall", "wall", "wall", "wall", "wall", "wall",
+					"sand", "sand", "wall", "blank", "blank", "blank", "blank", "blank" },
+			{ "wall", "sand", "sand", "sand", "sand", "wall", "wall", "wall", "wall", "wall", "wall",
+					"sand", "sand", "wall", "blank", "blank", "blank", "blank", "blank" },
+			{ "wall", "sand", "sand", "sand", "sand", "wall", "sand", "sand", "sand", "sand", "sand",
+					"sand", "sand", "wall", "blank", "blank", "blank", "blank", "blank" },
+			{ "wall", "sand", "sand", "sand", "sand", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
+					"wall", "wall", "wall", "wall", "blank", "blank" },
+			{ "wall", "sand", "sand", "sand", "wall", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
+					"sand", "sand", "character", "wall", "blank", "blank" },
+			{ "wall", "wall", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
+					"wall", "wall", "wall", "wall", "blank", "blank" },
+			{ "blank", "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
+					"wall", "wall", "wall", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
+					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" } };
+
+
+public static String[][] level4 = {
+			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
+					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
+  //2
+			{ "blank", "wall", "wall", "wall", "blank", "blank", "blank", "blank", "wall", "wall", "wall",
+					"wall", "wall", "wall", "wall", "blank", "blank", "blank", "blank" },
+  //3
+			{ "blank", "wall", "end", "wall", "wall", "wall", "wall", "wall", "wall", "key", "sand",
+					"sand", "sand", "sand", "wall", "blank", "blank", "blank", "blank" },
+  //4
+			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "wall", "wall", "sand", "sand",
+					"sand", "sand", "sand", "wall", "blank", "blank", "blank", "blank" },
+  //5
+			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "wall", "wall", "sand", "sand",
+					"sand", "sand", "sand", "wall", "blank", "blank", "blank", "blank" },
+  //6
+			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "wall", "wall", "sand", "wall",
+					"wall", "wall", "sand", "wall", "blank", "blank", "blank", "blank" },
+  //7
+			{ "blank", "wall", "wall", "wall", "wall", "wall", "lock", "wall", "wall", "sand", "wall",
+					"wall", "wall", "sand", "wall", "blank", "blank", "blank", "blank" },
+  //8
+			{ "blank", "wall", "wall", "wall", "wall", "wall", "sand", "wall", "wall", "sand", "money",
+					"sand", "sand", "sand", "wall", "blank", "blank", "blank", "blank" },
+  //9
+			{ "blank", "wall", "sand", "sand", "sand", "sand", "hardSand", "hardSand", "hardSand", "sand", "sand",
+					"sand", "sand", "sand", "wall", "blank", "blank", "blank", "blank" },
+  //10
+			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "wall", "sand", "sand", "sand",
+					"sand", "sand", "sand", "wall", "blank", "blank", "blank", "blank" },
+  //11
+			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "wall", "sand", "sand", "sand", "sand", "sand",
+					"sand", "wall", "blank", "blank", "blank", "blank" },
+  //12
+			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "wall", "sand", "sand", "sand", "sand", "sand",
+					"sand", "wall", "blank", "blank", "blank", "blank" },
+  //13
+			{ "blank", "wall", "character", "sand", "sand", "sand", "sand", "wall", "wall", "wall", "wall", "wall", "wall",
+					"wall", "wall", "blank", "blank", "blank", "blank" },
+  //14
+			{ "blank", "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
+					"wall", "wall", "wall", "blank", "blank", "blank", "blank", "blank" },
+  //15
+			{ "blank", "wall", "wall", "wall", "wall", "wall", "wall", "blank", "blank", "blank", "blank",
+					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" } };
 	public static String[][] level5 = {
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
