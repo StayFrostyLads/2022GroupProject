@@ -13,12 +13,15 @@ public class TitlePanel extends JPanel {
 		add(title);
 		
 		start = new JButton("Start"); // JButtons and labels can be images, so we can design good images so it looks good
+		start.setBackground(Color.GREEN);
 		instructions = new JButton("Instructions");
+		instructions.setBackground(Color.CYAN);
 		quit = new JButton("Quit");
+		quit.setBackground(Color.RED);
 		
 		add(start);
 		add(quit);
-		add(instructions);	
+		add(instructions);
 		
 	}
 }
