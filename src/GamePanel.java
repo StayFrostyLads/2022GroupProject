@@ -8,7 +8,7 @@ import java.awt.event.KeyListener;
 
 public class GamePanel extends JPanel implements KeyListener {
 	public static int level = 1;
-	public static String[][] level6, level7, level8, level9;
+	public static String[][] level7, level8, level9;
 	public static String[][] currentLevel = new String[15][19];
 	boolean play;
 	Character character;
@@ -187,6 +187,38 @@ public class GamePanel extends JPanel implements KeyListener {
 							"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" } };
+	
+	final String[][] level6 = {
+			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
+					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
+						"blank", "wall", "wall", "wall", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
+						"blank", "wall", "portal", "wall", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "wall", "wall", "wall", "blank", "blank", "blank", "blank", "blank", "blank",
+						"blank", "wall", "sand", "wall", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "wall", "character", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
+						"wall", "wall", "sand", "wall", "wall", "wall", "blank", "blank" },
+			{ "blank", "wall", "sand", "sand", "wall", "wall", "wall", "wall", "wall", "sand", "sand",
+						"sand", "hardSand", "hardSand", "hardSand", "sand", "sand", "wall", "blank" },
+			{ "blank", "blank", "wall", "sand", "sand", "sand", "wall", "sand", "wall", "wall", "wall",
+						"wall", "sand", "sand", "sand", "sand", "wall", "blank", "blank" },
+			{ "blank", "blank", "wall", "sand", "wall", "sand", "wall", "sand", "wall", "wall", "wall",
+						"wall", "sand", "sand", "sand", "sand", "wall", "blank", "blank" },
+			{ "blank", "blank", "wall", "sand", "wall", "sand", "wall", "sand", "wall", "wall", "wall",
+						"wall", "sand", "sand", "sand", "sand", "wall", "blank", "blank" },
+			{ "blank", "blank", "wall", "sand", "wall", "sand", "sand", "sand", "wall", "wall", "wall",
+						"wall", "sand", "sand", "sand", "sand", "wall", "blank", "blank" },
+			{ "blank", "blank", "wall", "sand", "wall", "sand", "sand", "sand", "sand", "wall", "wall",
+						"wall", "wall", "wall", "wall", "sand", "wall", "blank", "blank" },
+			{ "blank", "blank", "wall", "sand", "sand", "sand", "sand", "sand", "hardSand", "money", "wall",
+						"wall", "wall", "wall", "character", "sand", "wall", "blank", "blank" },
+			{ "wall", "character", "hardSand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "wall",
+						"blank", "blank", "blank", "blank", "blank", "blank" },
+			{ "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
+						"wall", "wall", "blank", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
+						"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" } };
 	
 	final String[][] level10 = {
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
