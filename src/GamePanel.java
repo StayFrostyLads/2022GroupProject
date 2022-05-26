@@ -13,6 +13,7 @@ public class GamePanel extends JPanel implements KeyListener {
 	boolean play;
 	Character character;
 	String characterOnBlock;
+	boolean move = true;
 
 	// Level example from thin ice level 1 --> for testing as no levels made yet
 	public static String[][] level1 = {
@@ -39,7 +40,7 @@ public class GamePanel extends JPanel implements KeyListener {
 			{ "blank", "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
 					"wall", "wall", "wall", "wall", "blank", "blank" },
 			{ "blank", "blank", "wall", "end", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
-					"sand", "sand", "start", "wall", "blank", "blank" },
+					"sand", "sand", "character", "wall", "blank", "blank" },
 			{ "blank", "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
 					"wall", "wall", "wall", "wall", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
@@ -49,7 +50,7 @@ public class GamePanel extends JPanel implements KeyListener {
 
 	GamePanel() {
 		level = 1;
-		characterOnBlock = "start";
+		characterOnBlock = "sand";
 		setFocusable(true);
 		addKeyListener(this);
 		setLayout(new GridLayout(15, 19));
@@ -66,40 +67,58 @@ public class GamePanel extends JPanel implements KeyListener {
 		level = l;
 	}
 
-//	public void updateCurrentLevel(String directionMoved) {
-//		removeAll();
-//		
-//		if (directionMoved.equals("right")) {
-//			currentLevel[Character.posY][Character.posX] = "character";
-//			currentLevel[Character.posY][Character.posX -1] = characterOnBlock;
-//		} else if (directionMoved.equals("left")) {
-//			currentLevel[Character.posY][Character.posX] = "character";
-//			currentLevel[Character.posY][Character.posX + 1] = characterOnBlock;
-//		} else if (directionMoved.equals("up")) {
-//			currentLevel[Character.posY][Character.posX] = "character";
-//			currentLevel[Character.posY][Character.posX - 1] = characterOnBlock;
-//		} else if (directionMoved.equals("down")) {
-//			currentLevel[Character.posY][Character.posX] = "character";
-//			currentLevel[Character.posY][Character.posX + 1] = characterOnBlock;
-//		} else {
-//			System.out.println("Error: Failed to render level after movement. Character was moving " + directionMoved);
-//		}
-//		
-//		
-//		for (int i = 0; i < 15; i++) {
-//			for (int j = 0; j < 19; j++) {
-//				if (currentLevel[i][j].equals("character")) {
-//					add(character);
-//					Character.setPosX(j);
-//					Character.setPosY(i);
-//				} else {
-//					add(createBlock(currentLevel[i][j]));
-//				}
-//			}
-//
-//		}
-//	}
-	
+	public void updateCurrentLevel(String directionMoved) {
+		removeAll();
+		if (directionMoved.equals("right")) {
+			currentLevel[Character.posY][Character.posX] = "character";
+			currentLevel[Character.posY][Character.posX - 1] = characterOnBlock;
+			characterOnBlock = level1[Character.posY][Character.posX+1];
+			System.out.println(characterOnBlock);
+			if (characterOnBlock.equals("sand")) {
+				currentLevel[Character.posY][Character.posX - 1] = "quick sand";
+			}
+		} else if (directionMoved.equals("left")) {
+			currentLevel[Character.posY][Character.posX] = "character";
+			currentLevel[Character.posY][Character.posX + 1] = characterOnBlock;
+			characterOnBlock = level1[Character.posY][Character.posX-1];
+			System.out.println(characterOnBlock);
+			if (characterOnBlock.equals("sand")) {
+				currentLevel[Character.posY][Character.posX + 1] = "quick sand";
+			}
+		} else if (directionMoved.equals("up")) {
+			currentLevel[Character.posY][Character.posX] = "character";
+			currentLevel[Character.posY][Character.posX - 1] = characterOnBlock;
+			characterOnBlock = level1[Character.posY+1][Character.posX];
+			System.out.println(characterOnBlock);
+			if (characterOnBlock.equals("sand")) {
+				currentLevel[Character.posY - 1][Character.posX] = "quick sand";
+			}
+		} else if (directionMoved.equals("down")) {
+			currentLevel[Character.posY][Character.posX] = "character";
+			currentLevel[Character.posY][Character.posX + 1] = characterOnBlock;
+			characterOnBlock = level1[Character.posY-1][Character.posX];
+			System.out.println(characterOnBlock);
+			if (characterOnBlock.equals("sand")) {
+				currentLevel[Character.posY + 1][Character.posX] = "quick sand";
+			}
+		} else {
+			System.out.println("Error: Failed to render level after movement. Character was moving " + directionMoved);
+		}
+
+		for (int i = 0; i < 15; i++) {
+			for (int j = 0; j < 19; j++) {
+				if (currentLevel[i][j].equals("character")) {
+					add(character);
+					Character.setPosX(j);
+					Character.setPosY(i);
+				} else {
+					add(createBlock(currentLevel[i][j]));
+				}
+			}
+
+		}
+	}
+
 	public void initializeLevel() {
 		removeAll();
 
@@ -127,7 +146,7 @@ public class GamePanel extends JPanel implements KeyListener {
 
 		for (int i = 0; i < 15; i++) {
 			for (int j = 0; j < 19; j++) {
-				if (currentLevel[i][j].equals("start")) {
+				if (currentLevel[i][j].equals("character")) {
 					add(character);
 					Character.setPosX(j);
 					Character.setPosY(i);
@@ -172,14 +191,14 @@ public class GamePanel extends JPanel implements KeyListener {
 
 		return tile;
 	}
-	
+
 	public void keyTyped(KeyEvent event) {
-		
+
 	}
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		
+
 	}
 
 	@Override
@@ -189,27 +208,28 @@ public class GamePanel extends JPanel implements KeyListener {
 			if (character.canUp) {
 				Character.posY = Character.posY + 1;
 				System.out.println(Character.posY);
-				//updateCurrentLevel("up");
+				this.updateCurrentLevel("up");
 			}
 		} else if (event.getKeyCode() == KeyEvent.VK_DOWN || event.getKeyCode() == KeyEvent.VK_S) {
 			if (character.canDown) {
 				Character.posY = Character.posY - 1;
 				System.out.println(Character.posY);
-				//updateCurrentLevel("down");
+				this.updateCurrentLevel("down");
 			}
 		} else if (event.getKeyCode() == KeyEvent.VK_LEFT || event.getKeyCode() == KeyEvent.VK_A) {
 			if (character.canLeft) {
 				Character.posX = Character.posX - 1;
 				System.out.println(Character.posX);
-				//updateCurrentLevel("left");
+				this.updateCurrentLevel("left");
 			}
 		} else if (event.getKeyCode() == KeyEvent.VK_RIGHT || event.getKeyCode() == KeyEvent.VK_D) {
 			if (character.canRight) {
 				Character.posX = Character.posX + 1;
 				System.out.println(Character.posX);
-				//updateCurrentLevel("right");
+				this.updateCurrentLevel("right");
 			}
 		}
+		this.revalidate();
 	}
 
 }
