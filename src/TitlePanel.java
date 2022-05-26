@@ -16,13 +16,15 @@ public class TitlePanel extends JPanel {
 		start = new JButton("Start"); // JButtons and labels can be images, so we can design good images so it looks good
 		start.setBackground(Color.GREEN);
 		start.setBounds(290,250,200,250);
+		start.setFont(new Font("", Font.PLAIN, 30));
 		instructions = new JButton("Instructions");
 		instructions.setBackground(Color.CYAN);
 		instructions.setBounds(40,250,200,250);
+		instructions.setFont(new Font("", Font.PLAIN, 30));
 		quit = new JButton("Quit");
 		quit.setBackground(Color.RED);
 		quit.setBounds(540,250,200,250);
-		//if you can make the words bigger do that
+		quit.setFont(new Font("", Font.PLAIN, 30));
 		
 		setBackground(Color.ORANGE);
 		add(start);
