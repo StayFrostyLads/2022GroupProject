@@ -19,6 +19,7 @@ public class TitlePanel extends JPanel {
 		quit = new JButton("Quit");
 		quit.setBackground(Color.RED);
 		
+		setBackground(Color.ORANGE);
 		add(start);
 		add(quit);
 		add(instructions);
