@@ -12,7 +12,7 @@ Jack Nebeker - Developer & GitHub Manager & Spelling Speciailist
 
 Rowan Turner - Developer & Level Architect
 
-Andry Joseph - Developer & Level Architect
+Andry Joseph - 
 
 ## Description:
 
