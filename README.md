@@ -10,7 +10,7 @@ Henry Christiansen - Senior Developer
 
 Jack Nebeker - Developer & GitHub Manager & Spelling Speciailist
 
-Sophia Turner - Developer & Level Architect
+Rowan Turner - Developer & Level Architect
 
 Andry Joseph - Developer & Level Architect
 
@@ -23,6 +23,3 @@ Controls are WASD/Arrow Keys to move
 
 Flow Chart:
 ![Flow Chart](https://user-images.githubusercontent.com/61328987/148413463-abf1f0d4-8fff-498f-be9c-a7014a29997b.png)
-
-Package:
-![Package](https://user-images.githubusercontent.com/59467621/151025846-686cd8d8-e277-4336-84c6-62af3fb6de17.png)
