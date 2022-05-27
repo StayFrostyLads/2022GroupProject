@@ -1,6 +1,7 @@
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import java.awt.*;
 
 public class InstructionPanel extends JPanel {
 	
@@ -8,14 +9,20 @@ public class InstructionPanel extends JPanel {
 	JLabel title;
 	
 	public InstructionPanel() {
-		//setLayout(null);
+		setLayout(null);
 		JLabel title = new JLabel("Instructions"); //Will be image in future - Stacker just say Desert of Doom in good font
-		title.setBounds(50,50,200,50);
+		title.setBounds(200,50,550,75);
+		title.setFont(new Font("", Font.PLAIN, 70));
 		add(title);
 		
 		start = new JButton("Start"); // JButtons and labels can be images, so we can design good images so it looks good
+		start.setBackground(Color.GREEN);
+		start.setBounds(100, 500, 200, 100);
 		quit = new JButton("Quit");
+		quit.setBackground(Color.RED);
+		quit.setBounds(450, 500, 200, 100);
 		
+		setBackground(Color.ORANGE);
 		add(start);
 		add(quit);
 		
