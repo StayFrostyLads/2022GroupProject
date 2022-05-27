@@ -55,6 +55,16 @@ public class InstructionPanel extends JPanel {
 		wTile.setIcon(wall);
 		wTile.setBounds(400,350,50,50);
 		
+		JLabel sWords = new JLabel();
+		JLabel eWords = new JLabel();
+		JLabel qsWords = new JLabel();
+		JLabel mWords = new JLabel();
+		JLabel pWords = new JLabel();
+		JLabel hsWords = new JLabel();
+		JLabel kWords = new JLabel();
+		JLabel lWords = new JLabel();
+		JLabel wWords = new JLabel();
+		
 		start = new JButton("Start"); // JButtons and labels can be images, so we can design good images so it looks good
 		start.setBackground(Color.GREEN);
 		start.setBounds(100, 500, 200, 100);
