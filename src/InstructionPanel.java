@@ -44,12 +44,16 @@ public class InstructionPanel extends JPanel {
 		pTile.setBounds(50,425,50,50);
 		JLabel hsTile = new JLabel();
 		hsTile.setIcon(hardSand);
+		hsTile.setBounds(400,125,50,50);
 		JLabel kTile = new JLabel();
 		kTile.setIcon(key);
+		kTile.setBounds(400,200,50,50);
 		JLabel lTile = new JLabel();
 		lTile.setIcon(lock);
+		lTile.setBounds(400,275,50,50);
 		JLabel wTile = new JLabel();
 		wTile.setIcon(wall);
+		wTile.setBounds(400,350,50,50);
 		
 		start = new JButton("Start"); // JButtons and labels can be images, so we can design good images so it looks good
 		start.setBackground(Color.GREEN);
