@@ -6,7 +6,7 @@ Dr. William C. Hackett PhD - Director of Sound and Graphic Designer
 
 Sir Jack D. Staker - Knight of Graphic Design
 
-Henry Christiansen - Senior Developer
+Henry Christiansen - Senior^2 Developer
 
 Jack Nebeker - Developer & GitHub Manager & Spelling Speciailist
 
