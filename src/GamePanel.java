@@ -328,7 +328,7 @@ public class GamePanel extends JPanel implements KeyListener {
 					"blank", "wall", "money", "money", "money", "money", "money", "wall" },
 			{ "blank", "wall", "hardSand", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
 					"wall", "money", "money", "money", "money", "money", "wall" },
-			{ "wall", "wall", "lock", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "key",
+			{ "wall", "wall", "hardSand", "lock", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "key",
 					"wall", "wall", "wall", "wall", "wall", "wall" },
 			{ "wall", "end", "sand", "wall", "wall", "wall", "wall", "wall", "sand", "sand", "wall", "wall", "sand",
 					"wall", "blank", "blank", "blank", "blank", "blank" },
