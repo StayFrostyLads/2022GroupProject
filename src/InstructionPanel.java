@@ -15,6 +15,8 @@ public class InstructionPanel extends JPanel {
 		title.setFont(new Font("", Font.PLAIN, 70));
 		add(title);
 		
+		//Add text for instructions
+		
 		start = new JButton("Start"); // JButtons and labels can be images, so we can design good images so it looks good
 		start.setBackground(Color.GREEN);
 		start.setBounds(100, 500, 200, 100);
