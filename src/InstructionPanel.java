@@ -12,7 +12,7 @@ public class InstructionPanel extends JPanel {
 		setLayout(null);
 		JLabel title = new JLabel("Instructions"); //Will be image in future - Stacker just say Desert of Doom in good font
 		title.setBounds(200,50,550,75);
-		title.setFont(new Font("", Font.PLAIN, 70));
+		title.setFont(new Font("Garamond", Font.PLAIN, 70));
 		add(title);
 		
 		//Add text for instructions
@@ -20,11 +20,11 @@ public class InstructionPanel extends JPanel {
 		start = new JButton("Start"); // JButtons and labels can be images, so we can design good images so it looks good
 		start.setBackground(Color.GREEN);
 		start.setBounds(100, 500, 200, 100);
-		start.setFont(new Font("", Font.PLAIN, 30));
+		start.setFont(new Font("Garamond", Font.PLAIN, 30));
 		quit = new JButton("Quit");
 		quit.setBackground(Color.RED);
 		quit.setBounds(450, 500, 200, 100);
-		quit.setFont(new Font("", Font.PLAIN, 30));
+		quit.setFont(new Font("Garamond", Font.PLAIN, 30));
 		
 		setBackground(Color.ORANGE);
 		add(start);
