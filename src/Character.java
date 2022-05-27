@@ -8,10 +8,11 @@ public class Character extends JLabel {
 	boolean canDown;
 	boolean canLeft;
 	boolean canRight;
-	public static boolean lose, win;
+	static boolean hasKey;
 
 	public Character() {
 		setVisible(true);
+		hasKey = false;
 		ImageIcon a = new ImageIcon("./images/indybuff-r.png");
 		setIcon(a);
 	}
@@ -28,11 +29,8 @@ public class Character extends JLabel {
 
 	public void checkSurroundings() {
 		String blockState;
-        
+		
         blockState = GamePanel.currentLevel[posY][posX];
-        if (blockState.equals("end")) {
-        	win = true;
-        }
         
 		// right
 		try {
@@ -43,6 +41,12 @@ public class Character extends JLabel {
 					|| blockState.equals("money") || blockState.equals("portal") || blockState.equals("hardSand")
 					|| blockState.equals("key")) {
 				canRight = true;
+			} else if (blockState.equals("lock")) {
+				if (hasKey) {
+					canRight = true;
+				} else {
+					canRight = false;
+				}
 			} else {
 				canRight = false;
 				System.out.println("Error: Unknown Block to the right of character");
@@ -64,6 +68,12 @@ public class Character extends JLabel {
 					|| blockState.equals("money") || blockState.equals("portal") || blockState.equals("hardSand")
 					|| blockState.equals("key")) {
 				canLeft = true;
+			} else if (blockState.equals("lock")) {
+				if (hasKey) {
+					canLeft = true;
+				} else {
+					canLeft = false;
+				}
 			} else {
 				canLeft = false;
 				System.out.println("Error: Unknown Block to the left of character");
@@ -85,6 +95,12 @@ public class Character extends JLabel {
 					|| blockState.equals("money") || blockState.equals("portal") || blockState.equals("hardSand")
 					|| blockState.equals("key")) {
 				canUp = true;
+			} else if (blockState.equals("lock")) {
+				if (hasKey) {
+					canUp = true;
+				} else {
+					canUp = false;
+				}
 			} else {
 				canUp = false;
 				System.out.println("Error: Unknown Block above of character");
@@ -106,6 +122,12 @@ public class Character extends JLabel {
 					|| blockState.equals("money") || blockState.equals("portal") || blockState.equals("hardSand")
 					|| blockState.equals("key")) {
 				canDown = true;
+			} else if (blockState.equals("lock")) {
+				if (hasKey) {
+					canDown = true;
+				} else {
+					canDown = false;
+				}
 			} else {
 				canDown = false;
 				System.out.println("Error: Unknown Block above of character");
@@ -119,7 +141,7 @@ public class Character extends JLabel {
 		}
 		
 		if(!canUp && !canDown && !canLeft && !canRight) {
-			lose = true;
+			DesertOfDoom.showScreen("lose");
 		}
 	}
 
