@@ -19,332 +19,332 @@ public class GamePanel extends JPanel implements KeyListener {
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "wall", "wall", "wall", "blank", "blank", "blank", "blank" },
-			{ "blank", "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
-					"wall", "wall", "end", "wall", "wall", "wall", "blank", "blank" },
-			{ "blank", "blank", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
-						"sand", "sand", "sand", "sand", "sand", "wall", "blank", "blank" },
-			{ "blank", "blank", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
-					"sand", "sand", "sand", "sand", "sand", "wall", "blank", "blank" },
-			{ "blank", "blank", "wall", "character", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
-						"sand", "sand", "sand", "sand", "sand", "wall", "blank", "blank" },
-			{ "blank", "blank", "wall", "wall", "wall", "wall", "sand", "sand", "wall", "wall", "wall",
-					"wall", "wall", "wall", "wall", "wall", "wall", "blank", "blank" },
-			{ "blank", "blank", "blank", "blank", "blank", "wall", "wall", "wall", "wall", "blank", "blank",
-					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
+					"end", "wall", "wall", "wall", "blank", "blank" },
+			{ "blank", "blank", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
+					"sand", "sand", "sand", "wall", "blank", "blank" },
+			{ "blank", "blank", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
+					"sand", "sand", "sand", "wall", "blank", "blank" },
+			{ "blank", "blank", "wall", "character", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
+					"sand", "sand", "sand", "sand", "wall", "blank", "blank" },
+			{ "blank", "blank", "wall", "wall", "wall", "wall", "sand", "sand", "wall", "wall", "wall", "wall", "wall",
+					"wall", "wall", "wall", "wall", "blank", "blank" },
+			{ "blank", "blank", "blank", "blank", "blank", "wall", "wall", "wall", "wall", "blank", "blank", "blank",
+					"blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
-						"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
+					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
-							"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
+					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
-								"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
+					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" } };
-	
+
 	final String[][] level2 = {
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
-						"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
+					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
-							"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
-			{ "blank", "blank", "wall", "wall", "wall", "wall", "wall", "blank", "blank", "blank", "blank",
-						"wall", "wall", "wall", "wall", "wall", "wall", "blank", "blank" },
-			{ "blank", "wall", "wall", "sand", "sand", "sand", "wall", "blank", "blank", "blank", "blank",
-					"wall", "sand", "sand", "sand", "sand", "wall", "blank", "blank" },
-			{ "blank", "wall", "sand", "hardSand", "sand", "sand", "wall", "blank", "blank", "blank", "blank",
-						"wall", "sand", "sand", "sand", "sand", "wall", "blank", "blank" },
-			{ "blank", "wall", "sand", "sand", "sand", "sand", "wall", "blank", "blank", "wall", "wall",
-							"wall", "sand", "sand", "sand", "sand", "wall", "blank", "blank" },
-			{ "blank", "wall", "sand", "sand", "sand", "sand", "wall", "blank", "blank", "wall", "end",
-								"sand", "hardSand", "sand", "sand", "sand", "wall", "wall", "wall" },
-			{ "blank", "wall", "sand", "sand", "sand", "sand", "wall", "wall", "wall", "wall", "wall",
-									"wall", "sand", "sand", "sand", "sand", "sand", "sand", "wall" },
-			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
-										"sand", "sand", "sand", "sand", "sand", "sand", "sand", "wall" },
-			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
-											"sand", "sand", "sand", "sand", "sand", "sand", "sand", "wall" },
-			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
-												"sand", "sand", "sand", "sand", "hardSand", "sand", "sand", "wall" },
-			{ "blank", "wall", "character", "wall", "wall", "wall", "wall", "wall", "wall", "sand", "sand",
-								"sand", "sand", "sand", "sand", "sand", "wall", "wall", "wall" },
-			{ "blank", "wall", "wall", "wall", "blank", "blank", "blank", "blank", "wall", "wall", "wall",
-					"wall", "wall", "wall", "wall", "wall", "wall", "blank", "blank" },
+					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "wall", "wall", "wall", "wall", "wall", "blank", "blank", "blank", "blank", "wall",
+					"wall", "wall", "wall", "wall", "wall", "blank", "blank" },
+			{ "blank", "wall", "wall", "sand", "sand", "sand", "wall", "blank", "blank", "blank", "blank", "wall",
+					"sand", "sand", "sand", "sand", "wall", "blank", "blank" },
+			{ "blank", "wall", "sand", "hardSand", "sand", "sand", "wall", "blank", "blank", "blank", "blank", "wall",
+					"sand", "sand", "sand", "sand", "wall", "blank", "blank" },
+			{ "blank", "wall", "sand", "sand", "sand", "sand", "wall", "blank", "blank", "wall", "wall", "wall", "sand",
+					"sand", "sand", "sand", "wall", "blank", "blank" },
+			{ "blank", "wall", "sand", "sand", "sand", "sand", "wall", "blank", "blank", "wall", "end", "sand",
+					"hardSand", "sand", "sand", "sand", "wall", "wall", "wall" },
+			{ "blank", "wall", "sand", "sand", "sand", "sand", "wall", "wall", "wall", "wall", "wall", "wall", "sand",
+					"sand", "sand", "sand", "sand", "sand", "wall" },
+			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
+					"sand", "sand", "sand", "sand", "sand", "wall" },
+			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
+					"sand", "sand", "sand", "sand", "sand", "wall" },
+			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
+					"sand", "sand", "hardSand", "sand", "sand", "wall" },
+			{ "blank", "wall", "character", "wall", "wall", "wall", "wall", "wall", "wall", "sand", "sand", "sand",
+					"sand", "sand", "sand", "sand", "wall", "wall", "wall" },
+			{ "blank", "wall", "wall", "wall", "blank", "blank", "blank", "blank", "wall", "wall", "wall", "wall",
+					"wall", "wall", "wall", "wall", "wall", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" } };
-	
+
 	final String[][] level3 = {
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
-			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "wall",
-					"wall", "wall", "wall", "wall", "wall", "wall", "blank", "blank" },
-			{ "blank", "wall", "wall", "wall", "wall", "blank", "blank", "blank", "blank", "blank", "wall",
-					"sand", "money", "sand", "money", "sand", "wall", "blank", "blank" },
-			{ "blank", "wall", "end", "sand", "wall", "blank", "blank", "blank", "blank", "blank", "wall",
-					"sand", "wall", "wall", "wall", "sand", "wall", "blank", "blank" },
-			{ "blank", "wall", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
-					"sand", "wall", "wall", "wall", "sand", "wall", "blank", "blank" },
-			{ "wall", "wall", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
-					"sand", "sand", "sand", "sand", "sand", "wall", "blank", "blank" },
-			{ "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
-					"sand", "sand", "wall", "wall", "wall", "wall", "blank", "blank" },
-			{ "wall", "sand", "sand", "sand", "sand", "wall", "wall", "wall", "wall", "wall", "wall",
-					"sand", "sand", "wall", "blank", "blank", "blank", "blank", "blank" },
-			{ "wall", "sand", "sand", "sand", "sand", "wall", "wall", "wall", "wall", "wall", "wall",
-					"sand", "sand", "wall", "blank", "blank", "blank", "blank", "blank" },
-			{ "wall", "sand", "sand", "sand", "sand", "wall", "sand", "sand", "sand", "sand", "sand",
-					"sand", "sand", "wall", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "wall", "wall",
+					"wall", "wall", "wall", "wall", "wall", "blank", "blank" },
+			{ "blank", "wall", "wall", "wall", "wall", "blank", "blank", "blank", "blank", "blank", "wall", "sand",
+					"money", "sand", "money", "sand", "wall", "blank", "blank" },
+			{ "blank", "wall", "end", "sand", "wall", "blank", "blank", "blank", "blank", "blank", "wall", "sand",
+					"wall", "wall", "wall", "sand", "wall", "blank", "blank" },
+			{ "blank", "wall", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "sand", "wall",
+					"wall", "wall", "sand", "wall", "blank", "blank" },
+			{ "wall", "wall", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
+					"sand", "sand", "sand", "wall", "blank", "blank" },
+			{ "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
+					"wall", "wall", "wall", "wall", "blank", "blank" },
+			{ "wall", "sand", "sand", "sand", "sand", "wall", "wall", "wall", "wall", "wall", "wall", "sand", "sand",
+					"wall", "blank", "blank", "blank", "blank", "blank" },
+			{ "wall", "sand", "sand", "sand", "sand", "wall", "wall", "wall", "wall", "wall", "wall", "sand", "sand",
+					"wall", "blank", "blank", "blank", "blank", "blank" },
+			{ "wall", "sand", "sand", "sand", "sand", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
+					"wall", "blank", "blank", "blank", "blank", "blank" },
 			{ "wall", "sand", "sand", "sand", "sand", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
 					"wall", "wall", "wall", "wall", "blank", "blank" },
 			{ "wall", "sand", "sand", "sand", "wall", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
 					"sand", "sand", "character", "wall", "blank", "blank" },
 			{ "wall", "wall", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
 					"wall", "wall", "wall", "wall", "blank", "blank" },
-			{ "blank", "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
-					"wall", "wall", "wall", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
+					"wall", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" } };
-	
+
 	final String[][] level4 = {
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
-  //2
-			{ "blank", "wall", "wall", "wall", "blank", "blank", "blank", "blank", "wall", "wall", "wall",
-					"wall", "wall", "wall", "wall", "blank", "blank", "blank", "blank" },
-  //3
-			{ "blank", "wall", "end", "wall", "wall", "wall", "wall", "wall", "wall", "key", "sand",
-					"sand", "sand", "sand", "wall", "blank", "blank", "blank", "blank" },
-  //4
-			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "wall", "wall", "sand", "sand",
-					"sand", "sand", "sand", "wall", "blank", "blank", "blank", "blank" },
-  //5
-			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "wall", "wall", "sand", "sand",
-					"sand", "sand", "sand", "wall", "blank", "blank", "blank", "blank" },
-  //6
-			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "wall", "wall", "sand", "wall",
-					"wall", "wall", "sand", "wall", "blank", "blank", "blank", "blank" },
-  //7
-			{ "blank", "wall", "wall", "wall", "wall", "wall", "lock", "wall", "wall", "sand", "wall",
-					"wall", "wall", "sand", "wall", "blank", "blank", "blank", "blank" },
-  //8
-			{ "blank", "wall", "wall", "wall", "wall", "wall", "sand", "wall", "wall", "sand", "money",
-					"sand", "sand", "sand", "wall", "blank", "blank", "blank", "blank" },
-  //9
+			// 2
+			{ "blank", "wall", "wall", "wall", "blank", "blank", "blank", "blank", "wall", "wall", "wall", "wall",
+					"wall", "wall", "wall", "blank", "blank", "blank", "blank" },
+			// 3
+			{ "blank", "wall", "end", "wall", "wall", "wall", "wall", "wall", "wall", "key", "sand", "sand", "sand",
+					"sand", "wall", "blank", "blank", "blank", "blank" },
+			// 4
+			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "wall", "wall", "sand", "sand", "sand", "sand",
+					"sand", "wall", "blank", "blank", "blank", "blank" },
+			// 5
+			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "wall", "wall", "sand", "sand", "sand", "sand",
+					"sand", "wall", "blank", "blank", "blank", "blank" },
+			// 6
+			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "wall", "wall", "sand", "wall", "wall", "wall",
+					"sand", "wall", "blank", "blank", "blank", "blank" },
+			// 7
+			{ "blank", "wall", "wall", "wall", "wall", "wall", "lock", "wall", "wall", "sand", "wall", "wall", "wall",
+					"sand", "wall", "blank", "blank", "blank", "blank" },
+			// 8
+			{ "blank", "wall", "wall", "wall", "wall", "wall", "sand", "wall", "wall", "sand", "money", "sand", "sand",
+					"sand", "wall", "blank", "blank", "blank", "blank" },
+			// 9
 			{ "blank", "wall", "sand", "sand", "sand", "sand", "hardSand", "hardSand", "hardSand", "sand", "sand",
 					"sand", "sand", "sand", "wall", "blank", "blank", "blank", "blank" },
-  //10
-			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "wall", "sand", "sand", "sand",
-					"sand", "sand", "sand", "wall", "blank", "blank", "blank", "blank" },
-  //11
+			// 10
 			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "wall", "sand", "sand", "sand", "sand", "sand",
 					"sand", "wall", "blank", "blank", "blank", "blank" },
-  //12
+			// 11
 			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "wall", "sand", "sand", "sand", "sand", "sand",
 					"sand", "wall", "blank", "blank", "blank", "blank" },
-  //13
-			{ "blank", "wall", "character", "sand", "sand", "sand", "sand", "wall", "wall", "wall", "wall", "wall", "wall",
-					"wall", "wall", "blank", "blank", "blank", "blank" },
-  //14
-			{ "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "blank", "blank", "blank",
-					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
-  //15
+			// 12
+			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "wall", "sand", "sand", "sand", "sand", "sand",
+					"sand", "wall", "blank", "blank", "blank", "blank" },
+			// 13
+			{ "blank", "wall", "character", "sand", "sand", "sand", "sand", "wall", "wall", "wall", "wall", "wall",
+					"wall", "wall", "wall", "blank", "blank", "blank", "blank" },
+			// 14
+			{ "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "blank", "blank", "blank", "blank",
+					"blank", "blank", "blank", "blank", "blank", "blank", "blank" },
+			// 15
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" } };
-	
+
 	final String[][] level5 = {
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
-			{ "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
-						"wall", "wall", "wall", "blank", "blank", "blank", "blank", "blank" },
-			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "wall",
-						"wall", "end", "wall", "wall", "wall", "wall", "wall", "blank" },
-			{ "blank", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall", "sand", "wall",
-						"wall", "sand", "wall", "key", "sand", "money", "wall", "blank" },
-			{ "blank", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall", "sand", "wall",
-						"wall", "lock", "wall", "sand", "wall", "sand", "wall", "blank" },
-			{ "blank", "wall", "sand", "sand", "wall", "wall", "wall", "wall", "wall", "sand", "sand",
-						"sand", "hardSand", "hardSand", "hardSand", "sand", "sand", "wall", "blank" },
-			{ "blank", "wall", "wall", "hardSand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
-						"sand", "sand", "sand", "wall", "wall", "wall", "wall", "blank" },
-			{ "blank", "wall", "wall", "hardSand", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
-						"wall", "sand", "sand", "wall", "blank", "blank", "blank", "blank" },
-			{ "blank", "wall", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
-						"wall", "sand", "sand", "wall", "blank", "blank", "blank", "blank" },
-			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
-						"sand", "sand", "sand", "wall", "wall", "wall", "blank", "blank" },
-			{ "blank", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
-						"wall", "wall", "sand", "sand", "character", "wall", "blank", "blank" },
-			{ "blank", "wall", "sand", "sand", "money", "sand", "sand", "sand", "sand", "sand", "sand",
-						"sand", "sand", "sand", "wall", "wall", "wall", "blank", "blank" },
-			{ "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
-						"wall", "wall", "wall", "wall", "blank", "blank", "blank", "blank" },
+			{ "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
+					"wall", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "wall", "wall", "end",
+					"wall", "wall", "wall", "wall", "wall", "blank" },
+			{ "blank", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall", "sand", "wall", "wall", "sand",
+					"wall", "key", "sand", "money", "wall", "blank" },
+			{ "blank", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall", "sand", "wall", "wall", "lock",
+					"wall", "sand", "wall", "sand", "wall", "blank" },
+			{ "blank", "wall", "sand", "sand", "wall", "wall", "wall", "wall", "wall", "sand", "sand", "sand",
+					"hardSand", "hardSand", "hardSand", "sand", "sand", "wall", "blank" },
+			{ "blank", "wall", "wall", "hardSand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
+					"sand", "sand", "wall", "wall", "wall", "wall", "blank" },
+			{ "blank", "wall", "wall", "hardSand", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
+					"sand", "sand", "wall", "blank", "blank", "blank", "blank" },
+			{ "blank", "wall", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "sand",
+					"sand", "wall", "blank", "blank", "blank", "blank" },
+			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
+					"sand", "wall", "wall", "wall", "blank", "blank" },
+			{ "blank", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
+					"sand", "sand", "character", "wall", "blank", "blank" },
+			{ "blank", "wall", "sand", "sand", "money", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
+					"sand", "wall", "wall", "wall", "blank", "blank" },
+			{ "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
+					"wall", "wall", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
-						"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
+					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
-						"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" } };
-	
+					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" } };
+
 	final String[][] level6 = {
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
-						"blank", "wall", "wall", "wall", "blank", "blank", "blank", "blank" },
+					"blank", "wall", "wall", "wall", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
-						"blank", "wall", "portal", "wall", "blank", "blank", "blank", "blank" },
-			{ "blank", "blank", "wall", "wall", "wall", "blank", "blank", "blank", "blank", "blank", "blank",
-						"blank", "wall", "sand", "wall", "blank", "blank", "blank", "blank" },
-			{ "blank", "blank", "wall", "end", "wall", "wall", "wall", "wall", "wall", "blank", "blank",
-						"wall", "wall", "sand", "wall", "wall", "wall", "blank", "blank" },
-			{ "blank", "blank", "wall", "sand", "sand", "sand", "sand", "sand", "wall", "blank", "blank",
-						"wall", "sand", "hardSand", "sand", "sand", "wall", "blank", "blank" },
-			{ "blank", "blank", "wall", "sand", "sand", "sand", "wall", "sand", "wall", "blank", "blank",
-						"wall", "sand", "sand", "sand", "sand", "wall", "blank", "blank" },
-			{ "blank", "blank", "wall", "sand", "wall", "sand", "wall", "sand", "wall", "blank", "blank",
-						"wall", "sand", "sand", "sand", "sand", "wall", "blank", "blank" },
-			{ "blank", "blank", "wall", "sand", "wall", "sand", "wall", "sand", "wall", "blank", "blank",
-						"wall", "sand", "sand", "sand", "sand", "wall", "blank", "blank" },
-			{ "blank", "blank", "wall", "sand", "wall", "sand", "sand", "sand", "wall", "wall", "blank",
-						"wall", "sand", "sand", "sand", "sand", "wall", "blank", "blank" },
-			{ "blank", "blank", "wall", "sand", "wall", "sand", "sand", "sand", "sand", "wall", "wall",
-						"wall", "wall", "wall", "wall", "sand", "wall", "blank", "blank" },
-			{ "blank", "blank", "wall", "sand", "sand", "sand", "sand", "sand", "hardSand", "money", "wall",
-						"wall", "wall", "wall", "character", "sand", "wall", "blank", "blank" },
+					"blank", "wall", "portal", "wall", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "wall", "wall", "wall", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
+					"wall", "sand", "wall", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "wall", "end", "wall", "wall", "wall", "wall", "wall", "blank", "blank", "wall", "wall",
+					"sand", "wall", "wall", "wall", "blank", "blank" },
+			{ "blank", "blank", "wall", "sand", "sand", "sand", "sand", "sand", "wall", "blank", "blank", "wall",
+					"sand", "hardSand", "sand", "sand", "wall", "blank", "blank" },
+			{ "blank", "blank", "wall", "sand", "sand", "sand", "wall", "sand", "wall", "blank", "blank", "wall",
+					"sand", "sand", "sand", "sand", "wall", "blank", "blank" },
+			{ "blank", "blank", "wall", "sand", "wall", "sand", "wall", "sand", "wall", "blank", "blank", "wall",
+					"sand", "sand", "sand", "sand", "wall", "blank", "blank" },
+			{ "blank", "blank", "wall", "sand", "wall", "sand", "wall", "sand", "wall", "blank", "blank", "wall",
+					"sand", "sand", "sand", "sand", "wall", "blank", "blank" },
+			{ "blank", "blank", "wall", "sand", "wall", "sand", "sand", "sand", "wall", "wall", "blank", "wall", "sand",
+					"sand", "sand", "sand", "wall", "blank", "blank" },
+			{ "blank", "blank", "wall", "sand", "wall", "sand", "sand", "sand", "sand", "wall", "wall", "wall", "wall",
+					"wall", "wall", "sand", "wall", "blank", "blank" },
+			{ "blank", "blank", "wall", "sand", "sand", "sand", "sand", "sand", "hardSand", "money", "wall", "wall",
+					"wall", "wall", "character", "sand", "wall", "blank", "blank" },
 			{ "blank", "blank", "wall", "wall", "wall", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall",
-						"wall", "wall", "wall", "wall", "blank", "blank" },
-			{ "blank", "blank", "blank", "blank", "blank", "wall", "portal", "wall", "blank", "blank", "blank",
-						"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
-			{ "blank", "blank", "blank", "blank", "blank", "wall", "wall", "wall", "blank", "blank", "blank",
-						"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" } };
+					"wall", "wall", "wall", "wall", "blank", "blank" },
+			{ "blank", "blank", "blank", "blank", "blank", "wall", "portal", "wall", "blank", "blank", "blank", "blank",
+					"blank", "blank", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "blank", "blank", "blank", "wall", "wall", "wall", "blank", "blank", "blank", "blank",
+					"blank", "blank", "blank", "blank", "blank", "blank", "blank" } };
 
 	final String[][] level7 = {
-			{ "blank", "blank", "blank", "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
-					"wall", "wall", "wall", "wall", "wall", "wall", "blank", "blank" },
-			{ "blank", "blank", "blank", "blank", "wall", "character", "sand", "sand", "sand", "sand", "sand",
-						"sand", "sand", "sand", "hardSand", "key", "wall", "blank", "blank" },
-			{ "blank", "blank", "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
-						"wall", "wall", "wall", "sand", "wall", "wall", "blank", "blank" },
-			{ "blank", "blank", "blank", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
-						"sand", "sand", "wall", "sand", "wall", "blank", "blank", "blank" },
-			{ "blank", "blank", "blank", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall",
-						"wall", "sand", "wall", "sand", "wall", "blank", "blank", "blank" },
-			{ "blank", "blank", "blank", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall",
-						"wall", "sand", "wall", "sand", "wall", "blank", "blank", "blank" },
-			{ "blank", "blank", "blank", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall",
-						"wall", "sand", "wall", "sand", "wall", "blank", "blank", "blank" },
-			{ "blank", "blank", "blank", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall",
-						"portal", "sand", "wall", "sand", "wall", "blank", "blank", "blank" },
-			{ "blank", "blank", "blank", "wall", "sand", "hardSand", "portal", "wall", "wall", "wall", "wall",
-						"sand", "money", "wall", "sand", "wall", "blank", "blank", "blank" },
-			{ "blank", "blank", "blank", "wall", "wall", "lock", "wall", "wall", "wall", "wall", "wall",
-						"wall", "wall", "wall", "sand", "wall", "blank", "blank", "blank" },
-			{ "blank", "blank", "blank", "wall", "end", "hardSand", "sand", "sand", "sand", "sand", "sand",
-						"sand", "sand", "sand", "hardSand", "wall", "blank", "blank", "blank" },
-			{ "blank", "blank", "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
-						"wall", "wall", "wall", "money", "wall", "blank", "blank", "blank" },
+			{ "blank", "blank", "blank", "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
+					"wall", "wall", "wall", "wall", "wall", "blank", "blank" },
+			{ "blank", "blank", "blank", "blank", "wall", "character", "sand", "sand", "sand", "sand", "sand", "sand",
+					"sand", "sand", "hardSand", "key", "wall", "blank", "blank" },
+			{ "blank", "blank", "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
+					"wall", "sand", "wall", "wall", "blank", "blank" },
+			{ "blank", "blank", "blank", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
+					"wall", "sand", "wall", "blank", "blank", "blank" },
+			{ "blank", "blank", "blank", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "sand",
+					"wall", "sand", "wall", "blank", "blank", "blank" },
+			{ "blank", "blank", "blank", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "sand",
+					"wall", "sand", "wall", "blank", "blank", "blank" },
+			{ "blank", "blank", "blank", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "sand",
+					"wall", "sand", "wall", "blank", "blank", "blank" },
+			{ "blank", "blank", "blank", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall", "portal",
+					"sand", "wall", "sand", "wall", "blank", "blank", "blank" },
+			{ "blank", "blank", "blank", "wall", "sand", "hardSand", "portal", "wall", "wall", "wall", "wall", "sand",
+					"money", "wall", "sand", "wall", "blank", "blank", "blank" },
+			{ "blank", "blank", "blank", "wall", "wall", "lock", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
+					"wall", "sand", "wall", "blank", "blank", "blank" },
+			{ "blank", "blank", "blank", "wall", "end", "hardSand", "sand", "sand", "sand", "sand", "sand", "sand",
+					"sand", "sand", "hardSand", "wall", "blank", "blank", "blank" },
+			{ "blank", "blank", "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
+					"wall", "money", "wall", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
-						"blank", "blank", "wall", "wall", "wall", "blank", "blank", "blank" },
+					"blank", "blank", "wall", "wall", "wall", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
-						"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
+					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
-						"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" } };
-	
+					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" } };
+
 	final String[][] level8 = {
-			{ "blank", "blank", "blank", "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
-					"wall", "wall", "blank", "blank", "blank", "blank", "blank", "blank" },
-			{ "blank", "blank", "blank", "blank", "wall", "portal", "sand", "sand", "sand", "sand", "sand",
-						"sand", "wall", "blank", "blank", "blank", "blank", "blank", "blank" },
-			{ "blank", "blank", "wall", "wall", "wall", "sand", "sand", "sand", "sand", "sand", "sand",
-						"hardSand", "wall", "blank", "blank", "blank", "blank", "blank", "blank" },
-			{ "blank", "blank", "wall", "sand", "sand", "sand", "sand", "sand", "wall", "sand", "wall",
-						"sand", "wall", "blank", "blank", "blank", "blank", "blank", "blank" },
-			{ "blank", "blank", "wall", "sand", "wall", "wall", "sand", "sand", "wall", "end", "wall",
-						"sand", "wall", "blank", "blank", "blank", "blank", "blank", "blank" },
-			{ "blank", "blank", "wall", "sand", "wall", "wall", "sand", "sand", "wall", "wall", "wall",
-						"sand", "wall", "blank", "blank", "blank", "blank", "blank", "blank" },
-			{ "blank", "blank", "wall", "sand", "wall", "wall", "sand", "sand", "wall", "character", "wall",
-						"sand", "wall", "blank", "blank", "blank", "blank", "blank", "blank" },
-			{ "blank", "blank", "wall", "sand", "wall", "wall", "sand", "sand", "wall", "sand", "wall",
-						"sand", "wall", "blank", "blank", "blank", "blank", "blank", "blank" },
-			{ "blank", "blank", "wall", "sand", "wall", "wall", "sand", "sand", "sand", "portal", "sand",
-						"sand", "wall", "blank", "blank", "blank", "blank", "blank", "blank" },
-			{ "blank", "blank", "wall", "sand", "wall", "wall", "hardSand", "sand", "sand", "sand", "hardSand",
-						"sand", "wall", "wall", "blank", "blank", "blank", "blank", "blank" },
-			{ "blank", "blank", "wall", "sand", "wall", "wall", "sand", "sand", "sand", "sand", "sand",
-						"hardSand", "hardSand", "wall", "blank", "blank", "blank", "blank", "blank" },
-			{ "blank", "blank", "wall", "sand", "sand", "sand", "sand", "sand", "wall", "wall", "wall",
-						"wall", "wall", "wall", "blank", "blank", "blank", "blank", "blank" },
-			{ "blank", "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "blank", "blank", "blank", "blank",
-						"blank", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "blank", "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
+					"wall", "blank", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "blank", "blank", "wall", "portal", "sand", "sand", "sand", "sand", "sand", "sand",
+					"wall", "blank", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "wall", "wall", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "hardSand",
+					"wall", "blank", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "wall", "sand", "sand", "sand", "sand", "sand", "wall", "sand", "wall", "sand", "wall",
+					"blank", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "wall", "sand", "wall", "wall", "sand", "sand", "wall", "end", "wall", "sand", "wall",
+					"blank", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "wall", "sand", "wall", "wall", "sand", "sand", "wall", "wall", "wall", "sand", "wall",
+					"blank", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "wall", "sand", "wall", "wall", "sand", "sand", "wall", "character", "wall", "sand",
+					"wall", "blank", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "wall", "sand", "wall", "wall", "sand", "sand", "wall", "sand", "wall", "sand", "wall",
+					"blank", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "wall", "sand", "wall", "wall", "sand", "sand", "sand", "portal", "sand", "sand",
+					"wall", "blank", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "wall", "sand", "wall", "wall", "hardSand", "sand", "sand", "sand", "hardSand", "sand",
+					"wall", "wall", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "wall", "sand", "wall", "wall", "sand", "sand", "sand", "sand", "sand", "hardSand",
+					"hardSand", "wall", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "wall", "sand", "sand", "sand", "sand", "sand", "wall", "wall", "wall", "wall", "wall",
+					"wall", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "blank", "blank", "blank",
+					"blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
-						"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
+					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
-						"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" } };
-	
+					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" } };
+
 	final String[][] level9 = {
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
-						"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
+					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
-						"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
-			{ "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
-						"blank", "wall", "wall", "wall", "wall", "blank", "blank", "blank" },
-			{ "blank", "wall", "sand", "sand", "sand", "wall", "wall", "sand", "sand", "sand", "wall",
-						"blank", "wall", "sand", "sand", "wall", "blank", "blank", "blank" },
-			{ "blank", "wall", "sand", "wall", "sand", "wall", "wall", "sand", "sand", "sand", "wall",
-						"blank", "wall", "sand", "sand", "wall", "blank", "blank", "blank" },
+					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "blank", "wall",
+					"wall", "wall", "wall", "blank", "blank", "blank" },
+			{ "blank", "wall", "sand", "sand", "sand", "wall", "wall", "sand", "sand", "sand", "wall", "blank", "wall",
+					"sand", "sand", "wall", "blank", "blank", "blank" },
+			{ "blank", "wall", "sand", "wall", "sand", "wall", "wall", "sand", "sand", "sand", "wall", "blank", "wall",
+					"sand", "sand", "wall", "blank", "blank", "blank" },
 			{ "blank", "wall", "sand", "hardSand", "hardSand", "wall", "wall", "sand", "hardSand", "sand", "wall",
-						"wall", "wall", "sand", "sand", "wall", "wall", "wall", "blank" },
-			{ "wall", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
-						"sand", "sand", "sand", "sand", "sand", "end", "wall", "blank" },
-			{ "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
-						"sand", "sand", "sand", "sand", "sand", "sand", "wall", "blank" },
-			{ "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
-						"sand", "sand", "sand", "sand", "sand", "sand", "wall", "blank" },
-			{ "wall", "character", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
-						"hardSand", "sand", "sand", "sand", "sand", "sand", "wall", "blank" },
-			{ "wall", "wall", "sand", "sand", "sand", "hardSand", "hardSand", "sand", "sand", "sand", "sand",
-						"sand", "sand", "sand", "sand", "sand", "sand", "wall", "blank" },
-			{ "blank", "wall", "wall", "wall", "wall", "sand", "sand", "wall", "wall", "wall", "sand",
-						"sand", "sand", "wall", "wall", "wall", "wall", "wall", "blank" },
-			{ "blank", "blank", "blank", "blank", "wall", "sand", "sand", "wall", "blank", "wall", "sand",
-						"sand", "sand", "wall", "blank", "blank", "blank", "blank", "blank" },
-			{ "blank", "blank", "blank", "blank", "wall", "sand", "sand", "wall", "blank", "wall", "sand",
-						"sand", "sand", "wall", "blank", "blank", "blank", "blank", "blank" },
-			{ "blank", "blank", "blank", "blank", "wall", "wall", "wall", "wall", "blank", "wall", "wall",
-						"wall", "wall", "wall", "blank", "blank", "blank", "blank", "blank" }, };
-	
+					"wall", "wall", "sand", "sand", "wall", "wall", "wall", "blank" },
+			{ "wall", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
+					"sand", "sand", "sand", "end", "wall", "blank" },
+			{ "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
+					"sand", "sand", "sand", "sand", "wall", "blank" },
+			{ "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
+					"sand", "sand", "sand", "sand", "wall", "blank" },
+			{ "wall", "character", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "hardSand",
+					"sand", "sand", "sand", "sand", "sand", "wall", "blank" },
+			{ "wall", "wall", "sand", "sand", "sand", "hardSand", "hardSand", "sand", "sand", "sand", "sand", "sand",
+					"sand", "sand", "sand", "sand", "sand", "wall", "blank" },
+			{ "blank", "wall", "wall", "wall", "wall", "sand", "sand", "wall", "wall", "wall", "sand", "sand", "sand",
+					"wall", "wall", "wall", "wall", "wall", "blank" },
+			{ "blank", "blank", "blank", "blank", "wall", "sand", "sand", "wall", "blank", "wall", "sand", "sand",
+					"sand", "wall", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "blank", "blank", "wall", "sand", "sand", "wall", "blank", "wall", "sand", "sand",
+					"sand", "wall", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "blank", "blank", "blank", "wall", "wall", "wall", "wall", "blank", "wall", "wall", "wall",
+					"wall", "wall", "blank", "blank", "blank", "blank", "blank" }, };
+
 	final String[][] level10 = {
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall" },
-			{ "blank", "wall", "wall", "wall", "wall", "wall", "blank", "blank", "blank", "blank", "blank",
-					"blank", "wall", "portal", "money", "money", "money", "money", "wall" },
+			{ "blank", "wall", "wall", "wall", "wall", "wall", "blank", "blank", "blank", "blank", "blank", "blank",
+					"wall", "portal", "money", "money", "money", "money", "wall" },
 			{ "blank", "wall", "hardSand", "hardSand", "hardSand", "wall", "blank", "blank", "blank", "blank", "blank",
 					"blank", "wall", "money", "money", "money", "money", "money", "wall" },
 			{ "blank", "wall", "hardSand", "wall", "portal", "wall", "blank", "blank", "blank", "blank", "blank",
 					"blank", "wall", "money", "money", "money", "money", "money", "wall" },
-			{ "blank", "wall", "hardSand", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
-					"wall", "wall", "money", "money", "money", "money", "money", "wall" },
-			{ "wall", "wall", "lock", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
-					"sand", "key", "wall", "wall", "wall", "wall", "wall", "wall" },
-			{ "wall", "end", "sand", "wall", "wall", "wall", "wall", "wall", "sand", "sand", "wall",
-					"wall", "sand", "wall", "blank", "blank", "blank", "blank", "blank" },
-			{ "wall", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "wall",
-					"wall", "sand", "wall", "blank", "blank", "blank", "blank", "blank" },
-			{ "blank", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall", "sand", "sand",
-					"sand", "sand", "wall", "blank", "blank", "blank", "blank", "blank" },
-			{ "blank", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall", "sand", "sand",
-					"hardSand", "sand", "wall", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "wall", "hardSand", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
+					"wall", "money", "money", "money", "money", "money", "wall" },
+			{ "wall", "wall", "lock", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "key",
+					"wall", "wall", "wall", "wall", "wall", "wall" },
+			{ "wall", "end", "sand", "wall", "wall", "wall", "wall", "wall", "sand", "sand", "wall", "wall", "sand",
+					"wall", "blank", "blank", "blank", "blank", "blank" },
+			{ "wall", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "wall", "wall", "sand",
+					"wall", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall", "sand", "sand", "sand", "sand",
+					"wall", "blank", "blank", "blank", "blank", "blank" },
+			{ "blank", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall", "sand", "sand", "hardSand",
+					"sand", "wall", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "wall", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "wall",
 					"wall", "blank", "blank", "blank", "blank", "blank" },
 			{ "wall", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "sand", "sand", "wall",
 					"blank", "blank", "blank", "blank", "blank", "blank" },
-			{ "wall", "character", "hardSand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "wall",
+			{ "wall", "character", "hardSand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand", "sand",
+					"wall", "blank", "blank", "blank", "blank", "blank", "blank" },
+			{ "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
 					"blank", "blank", "blank", "blank", "blank", "blank" },
-			{ "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
-					"wall", "wall", "blank", "blank", "blank", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
 					"blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank" } };
 
@@ -360,29 +360,59 @@ public class GamePanel extends JPanel implements KeyListener {
 		character = new Character();
 		initializeLevel();
 	}
-	
+
 	public String findCharacterOnBlock() {
 		String a = "sand";
 		if (level == 1) {
 			a = level1[Character.posY][Character.posX];
+			if (a.equals("hardSand")) {
+				a = hardSandHelperArray[Character.posY][Character.posX];
+			}
 		} else if (level == 2) {
 			a = level2[Character.posY][Character.posX];
+			if (a.equals("hardSand")) {
+				a = hardSandHelperArray[Character.posY][Character.posX];
+			}
 		} else if (level == 3) {
 			a = level3[Character.posY][Character.posX];
+			if (a.equals("hardSand")) {
+				a = hardSandHelperArray[Character.posY][Character.posX];
+			}
 		} else if (level == 4) {
 			a = level4[Character.posY][Character.posX];
+			if (a.equals("hardSand")) {
+				a = hardSandHelperArray[Character.posY][Character.posX];
+			}
 		} else if (level == 5) {
 			a = level5[Character.posY][Character.posX];
+			if (a.equals("hardSand")) {
+				a = hardSandHelperArray[Character.posY][Character.posX];
+			}
 		} else if (level == 6) {
 			a = level6[Character.posY][Character.posX];
+			if (a.equals("hardSand")) {
+				a = hardSandHelperArray[Character.posY][Character.posX];
+			}
 		} else if (level == 7) {
 			a = level7[Character.posY][Character.posX];
+			if (a.equals("hardSand")) {
+				a = hardSandHelperArray[Character.posY][Character.posX];
+			}
 		} else if (level == 8) {
 			a = level8[Character.posY][Character.posX];
+			if (a.equals("hardSand")) {
+				a = hardSandHelperArray[Character.posY][Character.posX];
+			}
 		} else if (level == 9) {
 			a = level9[Character.posY][Character.posX];
+			if (a.equals("hardSand")) {
+				a = hardSandHelperArray[Character.posY][Character.posX];
+			}
 		} else if (level == 10) {
 			a = level10[Character.posY][Character.posX];
+			if (a.equals("hardSand")) {
+				a = hardSandHelperArray[Character.posY][Character.posX];
+			}
 		}
 		return a;
 	}
@@ -395,6 +425,7 @@ public class GamePanel extends JPanel implements KeyListener {
 			currentLevel[Character.posY][Character.posX] = "character";
 			if (characterOnBlock.equals("hardSand")) {
 				characterOnBlock = "sand";
+				hardSandHelperArray[Character.posY][Character.posX - 1] = "sand";
 			} else if (characterOnBlock.equals("sand")) {
 				characterOnBlock = "quickSand";
 			} else if (characterOnBlock.equals("key")) {
@@ -403,12 +434,28 @@ public class GamePanel extends JPanel implements KeyListener {
 			} else if (characterOnBlock.equals("lock")) {
 				characterOnBlock = "quickSand";
 			} else if (characterOnBlock.equals("money")) {
-				BackgroundPanel.points+=15;
+				BackgroundPanel.points += 15;
 				BackgroundPanel.updateVariables();
 				characterOnBlock = "quickSand";
 			}
 			currentLevel[Character.posY][Character.posX - 1] = characterOnBlock;
 			characterOnBlock = findCharacterOnBlock();
+			if (characterOnBlock.equals("portal")) {
+				System.out.println("ONPORTAL");
+				characterOnBlock = "portal";
+				for (int i = 0; i < 15; i++) {
+					for (int j = 0; j < 19; j++) {
+						if (currentLevel[i][j].equals("portal") && i != Character.posY && j != Character.posX) {
+							Character.setPosX(j);
+							Character.setPosY(i);
+							currentLevel[i][j] = "character";
+						}
+						if (currentLevel[i][j].equals("portal") && i == Character.posY && j == Character.posX) {
+							currentLevel[i][j] = "portal";
+						}
+					}
+				}
+			}
 			if (characterOnBlock.equals("end")) {
 				characterOnBlock = "sand";
 				synchronized (DesertOfDoom.waitObject) {
@@ -419,7 +466,7 @@ public class GamePanel extends JPanel implements KeyListener {
 			currentLevel[Character.posY][Character.posX] = "character";
 			if (characterOnBlock.equals("hardSand")) {
 				characterOnBlock = "sand";
-				hardSandHelperArray[Character.posY][Character.posX] = "sand";
+				hardSandHelperArray[Character.posY][Character.posX + 1] = "sand";
 			} else if (characterOnBlock.equals("sand")) {
 				characterOnBlock = "quickSand";
 			} else if (characterOnBlock.equals("key")) {
@@ -428,12 +475,28 @@ public class GamePanel extends JPanel implements KeyListener {
 			} else if (characterOnBlock.equals("lock")) {
 				characterOnBlock = "quickSand";
 			} else if (characterOnBlock.equals("money")) {
-				BackgroundPanel.points+=15;
+				BackgroundPanel.points += 15;
 				BackgroundPanel.updateVariables();
 				characterOnBlock = "quickSand";
 			}
 			currentLevel[Character.posY][Character.posX + 1] = characterOnBlock;
 			characterOnBlock = findCharacterOnBlock();
+			if (characterOnBlock.equals("portal")) {
+				System.out.println("ONPORTAL");
+				characterOnBlock = "portal";
+				for (int i = 0; i < 15; i++) {
+					for (int j = 0; j < 19; j++) {
+						if (currentLevel[i][j].equals("portal") && i != Character.posY && j != Character.posX) {
+							Character.setPosX(j);
+							Character.setPosY(i);
+							currentLevel[i][j] = "character";
+						}
+						if (currentLevel[i][j].equals("portal") && i == Character.posY && j == Character.posX) {
+							currentLevel[i][j] = "portal";
+						}
+					}
+				}
+			}
 			if (characterOnBlock.equals("end")) {
 				characterOnBlock = "quickSand";
 				synchronized (DesertOfDoom.waitObject) {
@@ -444,7 +507,7 @@ public class GamePanel extends JPanel implements KeyListener {
 			currentLevel[Character.posY][Character.posX] = "character";
 			if (characterOnBlock.equals("hardSand")) {
 				characterOnBlock = "sand";
-				hardSandHelperArray[Character.posY][Character.posX] = "sand";
+				hardSandHelperArray[Character.posY + 1][Character.posX] = "sand";
 			} else if (characterOnBlock.equals("sand")) {
 				characterOnBlock = "quickSand";
 			} else if (characterOnBlock.equals("key")) {
@@ -453,12 +516,28 @@ public class GamePanel extends JPanel implements KeyListener {
 			} else if (characterOnBlock.equals("lock")) {
 				characterOnBlock = "quickSand";
 			} else if (characterOnBlock.equals("money")) {
-				BackgroundPanel.points+=15;
+				BackgroundPanel.points += 15;
 				BackgroundPanel.updateVariables();
 				characterOnBlock = "quickSand";
 			}
 			currentLevel[Character.posY + 1][Character.posX] = characterOnBlock;
 			characterOnBlock = findCharacterOnBlock();
+			if (characterOnBlock.equals("portal")) {
+				System.out.println("ONPORTAL");
+				characterOnBlock = "portal";
+				for (int i = 0; i < 15; i++) {
+					for (int j = 0; j < 19; j++) {
+						if (currentLevel[i][j].equals("portal") && i != Character.posY && j != Character.posX) {
+							Character.setPosX(j);
+							Character.setPosY(i);
+							currentLevel[i][j] = "character";
+						}
+						if (currentLevel[i][j].equals("portal") && i == Character.posY && j == Character.posX) {
+							currentLevel[i][j] = "portal";
+						}
+					}
+				}
+			}
 			if (characterOnBlock.equals("end")) {
 				characterOnBlock = "sand";
 				synchronized (DesertOfDoom.waitObject) {
@@ -469,7 +548,7 @@ public class GamePanel extends JPanel implements KeyListener {
 			currentLevel[Character.posY][Character.posX] = "character";
 			if (characterOnBlock.equals("hardSand")) {
 				characterOnBlock = "sand";
-				hardSandHelperArray[Character.posY][Character.posX] = "sand";
+				hardSandHelperArray[Character.posY - 1][Character.posX] = "sand";
 			} else if (characterOnBlock.equals("sand")) {
 				characterOnBlock = "quickSand";
 			} else if (characterOnBlock.equals("key")) {
@@ -478,12 +557,28 @@ public class GamePanel extends JPanel implements KeyListener {
 			} else if (characterOnBlock.equals("lock")) {
 				characterOnBlock = "quickSand";
 			} else if (characterOnBlock.equals("money")) {
-				BackgroundPanel.points+=15;
+				BackgroundPanel.points += 15;
 				BackgroundPanel.updateVariables();
 				characterOnBlock = "quickSand";
 			}
 			currentLevel[Character.posY - 1][Character.posX] = characterOnBlock;
 			characterOnBlock = findCharacterOnBlock();
+			if (characterOnBlock.equals("portal")) {
+				System.out.println("ONPORTAL");
+				characterOnBlock = "portal";
+				for (int i = 0; i < 15; i++) {
+					for (int j = 0; j < 19; j++) {
+						if (currentLevel[i][j].equals("portal") && i != Character.posY && j != Character.posX) {
+							Character.setPosX(j);
+							Character.setPosY(i);
+							currentLevel[i][j] = "character";
+						}
+						if (currentLevel[i][j].equals("portal") && i == Character.posY && j == Character.posX) {
+							currentLevel[i][j] = "portal";
+						}
+					}
+				}
+			}
 			if (characterOnBlock.equals("end")) {
 				characterOnBlock = "sand";
 				synchronized (DesertOfDoom.waitObject) {
@@ -539,7 +634,7 @@ public class GamePanel extends JPanel implements KeyListener {
 			}
 			for (int i = 0; i < 15; i++) {
 				for (int j = 0; j < 19; j++) {
-					hardSandHelperArray[i][j] = level1[i][j];
+					hardSandHelperArray[i][j] = level2[i][j];
 				}
 
 			}
@@ -552,7 +647,7 @@ public class GamePanel extends JPanel implements KeyListener {
 			}
 			for (int i = 0; i < 15; i++) {
 				for (int j = 0; j < 19; j++) {
-					hardSandHelperArray[i][j] = level1[i][j];
+					hardSandHelperArray[i][j] = level3[i][j];
 				}
 
 			}
@@ -565,7 +660,7 @@ public class GamePanel extends JPanel implements KeyListener {
 			}
 			for (int i = 0; i < 15; i++) {
 				for (int j = 0; j < 19; j++) {
-					hardSandHelperArray[i][j] = level1[i][j];
+					hardSandHelperArray[i][j] = level4[i][j];
 				}
 
 			}
@@ -578,7 +673,7 @@ public class GamePanel extends JPanel implements KeyListener {
 			}
 			for (int i = 0; i < 15; i++) {
 				for (int j = 0; j < 19; j++) {
-					hardSandHelperArray[i][j] = level1[i][j];
+					hardSandHelperArray[i][j] = level5[i][j];
 				}
 
 			}
@@ -591,7 +686,7 @@ public class GamePanel extends JPanel implements KeyListener {
 			}
 			for (int i = 0; i < 15; i++) {
 				for (int j = 0; j < 19; j++) {
-					hardSandHelperArray[i][j] = level1[i][j];
+					hardSandHelperArray[i][j] = level6[i][j];
 				}
 
 			}
@@ -604,7 +699,7 @@ public class GamePanel extends JPanel implements KeyListener {
 			}
 			for (int i = 0; i < 15; i++) {
 				for (int j = 0; j < 19; j++) {
-					hardSandHelperArray[i][j] = level1[i][j];
+					hardSandHelperArray[i][j] = level7[i][j];
 				}
 
 			}
@@ -617,7 +712,7 @@ public class GamePanel extends JPanel implements KeyListener {
 			}
 			for (int i = 0; i < 15; i++) {
 				for (int j = 0; j < 19; j++) {
-					hardSandHelperArray[i][j] = level1[i][j];
+					hardSandHelperArray[i][j] = level8[i][j];
 				}
 
 			}
@@ -630,7 +725,7 @@ public class GamePanel extends JPanel implements KeyListener {
 			}
 			for (int i = 0; i < 15; i++) {
 				for (int j = 0; j < 19; j++) {
-					hardSandHelperArray[i][j] = level1[i][j];
+					hardSandHelperArray[i][j] = level9[i][j];
 				}
 
 			}
@@ -643,7 +738,7 @@ public class GamePanel extends JPanel implements KeyListener {
 			}
 			for (int i = 0; i < 15; i++) {
 				for (int j = 0; j < 19; j++) {
-					hardSandHelperArray[i][j] = level1[i][j];
+					hardSandHelperArray[i][j] = level10[i][j];
 				}
 
 			}
