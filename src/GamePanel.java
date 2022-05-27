@@ -9,6 +9,7 @@ import java.awt.event.KeyListener;
 public class GamePanel extends JPanel implements KeyListener {
 	public static int level = 1;
 	public static String[][] currentLevel = new String[15][19];
+	public static String[][] hardSandHelperArray = new String[15][19];
 	boolean play;
 	Character character;
 	String characterOnBlock;
@@ -388,11 +389,22 @@ public class GamePanel extends JPanel implements KeyListener {
 
 	public void updateCurrentLevel(String directionMoved) {
 		removeAll();
+		BackgroundPanel.updateVariables();
+		BackgroundPanel.points++;
 		if (directionMoved.equals("right")) {
 			currentLevel[Character.posY][Character.posX] = "character";
 			if (characterOnBlock.equals("hardSand")) {
 				characterOnBlock = "sand";
 			} else if (characterOnBlock.equals("sand")) {
+				characterOnBlock = "quickSand";
+			} else if (characterOnBlock.equals("key")) {
+				Character.hasKey = true;
+				characterOnBlock = "quickSand";
+			} else if (characterOnBlock.equals("lock")) {
+				characterOnBlock = "quickSand";
+			} else if (characterOnBlock.equals("money")) {
+				BackgroundPanel.points+=15;
+				BackgroundPanel.updateVariables();
 				characterOnBlock = "quickSand";
 			}
 			currentLevel[Character.posY][Character.posX - 1] = characterOnBlock;
@@ -407,13 +419,23 @@ public class GamePanel extends JPanel implements KeyListener {
 			currentLevel[Character.posY][Character.posX] = "character";
 			if (characterOnBlock.equals("hardSand")) {
 				characterOnBlock = "sand";
+				hardSandHelperArray[Character.posY][Character.posX] = "sand";
 			} else if (characterOnBlock.equals("sand")) {
+				characterOnBlock = "quickSand";
+			} else if (characterOnBlock.equals("key")) {
+				Character.hasKey = true;
+				characterOnBlock = "quickSand";
+			} else if (characterOnBlock.equals("lock")) {
+				characterOnBlock = "quickSand";
+			} else if (characterOnBlock.equals("money")) {
+				BackgroundPanel.points+=15;
+				BackgroundPanel.updateVariables();
 				characterOnBlock = "quickSand";
 			}
 			currentLevel[Character.posY][Character.posX + 1] = characterOnBlock;
 			characterOnBlock = findCharacterOnBlock();
 			if (characterOnBlock.equals("end")) {
-				characterOnBlock = "sand";
+				characterOnBlock = "quickSand";
 				synchronized (DesertOfDoom.waitObject) {
 					DesertOfDoom.waitObject.notify();
 				}
@@ -422,7 +444,17 @@ public class GamePanel extends JPanel implements KeyListener {
 			currentLevel[Character.posY][Character.posX] = "character";
 			if (characterOnBlock.equals("hardSand")) {
 				characterOnBlock = "sand";
+				hardSandHelperArray[Character.posY][Character.posX] = "sand";
 			} else if (characterOnBlock.equals("sand")) {
+				characterOnBlock = "quickSand";
+			} else if (characterOnBlock.equals("key")) {
+				Character.hasKey = true;
+				characterOnBlock = "quickSand";
+			} else if (characterOnBlock.equals("lock")) {
+				characterOnBlock = "quickSand";
+			} else if (characterOnBlock.equals("money")) {
+				BackgroundPanel.points+=15;
+				BackgroundPanel.updateVariables();
 				characterOnBlock = "quickSand";
 			}
 			currentLevel[Character.posY + 1][Character.posX] = characterOnBlock;
@@ -437,7 +469,17 @@ public class GamePanel extends JPanel implements KeyListener {
 			currentLevel[Character.posY][Character.posX] = "character";
 			if (characterOnBlock.equals("hardSand")) {
 				characterOnBlock = "sand";
+				hardSandHelperArray[Character.posY][Character.posX] = "sand";
 			} else if (characterOnBlock.equals("sand")) {
+				characterOnBlock = "quickSand";
+			} else if (characterOnBlock.equals("key")) {
+				Character.hasKey = true;
+				characterOnBlock = "quickSand";
+			} else if (characterOnBlock.equals("lock")) {
+				characterOnBlock = "quickSand";
+			} else if (characterOnBlock.equals("money")) {
+				BackgroundPanel.points+=15;
+				BackgroundPanel.updateVariables();
 				characterOnBlock = "quickSand";
 			}
 			currentLevel[Character.posY - 1][Character.posX] = characterOnBlock;
@@ -462,6 +504,7 @@ public class GamePanel extends JPanel implements KeyListener {
 			}
 
 		}
+
 //		for (int i = 0; i < 19; i++) {
 //			System.out.print(currentLevel[11][i] + " ");
 //		}
@@ -481,6 +524,12 @@ public class GamePanel extends JPanel implements KeyListener {
 				}
 
 			}
+			for (int i = 0; i < 15; i++) {
+				for (int j = 0; j < 19; j++) {
+					hardSandHelperArray[i][j] = level1[i][j];
+				}
+
+			}
 		} else if (level == 2) {
 			for (int i = 0; i < 15; i++) {
 				for (int j = 0; j < 19; j++) {
@@ -488,22 +537,116 @@ public class GamePanel extends JPanel implements KeyListener {
 				}
 
 			}
+			for (int i = 0; i < 15; i++) {
+				for (int j = 0; j < 19; j++) {
+					hardSandHelperArray[i][j] = level1[i][j];
+				}
+
+			}
 		} else if (level == 3) {
-			currentLevel = level3;
+			for (int i = 0; i < 15; i++) {
+				for (int j = 0; j < 19; j++) {
+					currentLevel[i][j] = level3[i][j];
+				}
+
+			}
+			for (int i = 0; i < 15; i++) {
+				for (int j = 0; j < 19; j++) {
+					hardSandHelperArray[i][j] = level1[i][j];
+				}
+
+			}
 		} else if (level == 4) {
-			currentLevel = level4;
+			for (int i = 0; i < 15; i++) {
+				for (int j = 0; j < 19; j++) {
+					currentLevel[i][j] = level4[i][j];
+				}
+
+			}
+			for (int i = 0; i < 15; i++) {
+				for (int j = 0; j < 19; j++) {
+					hardSandHelperArray[i][j] = level1[i][j];
+				}
+
+			}
 		} else if (level == 5) {
-			currentLevel = level5;
+			for (int i = 0; i < 15; i++) {
+				for (int j = 0; j < 19; j++) {
+					currentLevel[i][j] = level5[i][j];
+				}
+
+			}
+			for (int i = 0; i < 15; i++) {
+				for (int j = 0; j < 19; j++) {
+					hardSandHelperArray[i][j] = level1[i][j];
+				}
+
+			}
 		} else if (level == 6) {
-			currentLevel = level6;
+			for (int i = 0; i < 15; i++) {
+				for (int j = 0; j < 19; j++) {
+					currentLevel[i][j] = level6[i][j];
+				}
+
+			}
+			for (int i = 0; i < 15; i++) {
+				for (int j = 0; j < 19; j++) {
+					hardSandHelperArray[i][j] = level1[i][j];
+				}
+
+			}
 		} else if (level == 7) {
-			currentLevel = level7;
+			for (int i = 0; i < 15; i++) {
+				for (int j = 0; j < 19; j++) {
+					currentLevel[i][j] = level7[i][j];
+				}
+
+			}
+			for (int i = 0; i < 15; i++) {
+				for (int j = 0; j < 19; j++) {
+					hardSandHelperArray[i][j] = level1[i][j];
+				}
+
+			}
 		} else if (level == 8) {
-			currentLevel = level8;
+			for (int i = 0; i < 15; i++) {
+				for (int j = 0; j < 19; j++) {
+					currentLevel[i][j] = level8[i][j];
+				}
+
+			}
+			for (int i = 0; i < 15; i++) {
+				for (int j = 0; j < 19; j++) {
+					hardSandHelperArray[i][j] = level1[i][j];
+				}
+
+			}
 		} else if (level == 9) {
-			currentLevel = level9;
+			for (int i = 0; i < 15; i++) {
+				for (int j = 0; j < 19; j++) {
+					currentLevel[i][j] = level9[i][j];
+				}
+
+			}
+			for (int i = 0; i < 15; i++) {
+				for (int j = 0; j < 19; j++) {
+					hardSandHelperArray[i][j] = level1[i][j];
+				}
+
+			}
 		} else if (level == 10) {
-			currentLevel = level10;
+			for (int i = 0; i < 15; i++) {
+				for (int j = 0; j < 19; j++) {
+					currentLevel[i][j] = level10[i][j];
+				}
+
+			}
+			for (int i = 0; i < 15; i++) {
+				for (int j = 0; j < 19; j++) {
+					hardSandHelperArray[i][j] = level1[i][j];
+				}
+
+			}
 		}
 
 		for (int i = 0; i < 15; i++) {
