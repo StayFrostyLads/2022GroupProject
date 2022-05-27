@@ -13,6 +13,7 @@ public class GamePanel extends JPanel implements KeyListener {
 	boolean play;
 	Character character;
 	String characterOnBlock;
+	boolean enteredLevel10 = false;
 
 	final String[][] level1 = {
 			{ "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank", "blank",
@@ -441,20 +442,7 @@ public class GamePanel extends JPanel implements KeyListener {
 			currentLevel[Character.posY][Character.posX - 1] = characterOnBlock;
 			characterOnBlock = findCharacterOnBlock();
 			if (characterOnBlock.equals("portal")) {
-				System.out.println("ONPORTAL");
-				characterOnBlock = "portal";
-				for (int i = 0; i < 15; i++) {
-					for (int j = 0; j < 19; j++) {
-						if (currentLevel[i][j].equals("portal") && i != Character.posY && j != Character.posX) {
-							Character.setPosX(j);
-							Character.setPosY(i);
-							currentLevel[i][j] = "character";
-						}
-						if (currentLevel[i][j].equals("portal") && i == Character.posY && j == Character.posX) {
-							currentLevel[i][j] = "portal";
-						}
-					}
-				}
+				portalEvent(level);
 			}
 			if (characterOnBlock.equals("end")) {
 				characterOnBlock = "sand";
@@ -482,20 +470,7 @@ public class GamePanel extends JPanel implements KeyListener {
 			currentLevel[Character.posY][Character.posX + 1] = characterOnBlock;
 			characterOnBlock = findCharacterOnBlock();
 			if (characterOnBlock.equals("portal")) {
-				System.out.println("ONPORTAL");
-				characterOnBlock = "portal";
-				for (int i = 0; i < 15; i++) {
-					for (int j = 0; j < 19; j++) {
-						if (currentLevel[i][j].equals("portal") && i != Character.posY && j != Character.posX) {
-							Character.setPosX(j);
-							Character.setPosY(i);
-							currentLevel[i][j] = "character";
-						}
-						if (currentLevel[i][j].equals("portal") && i == Character.posY && j == Character.posX) {
-							currentLevel[i][j] = "portal";
-						}
-					}
-				}
+				portalEvent(level);
 			}
 			if (characterOnBlock.equals("end")) {
 				characterOnBlock = "quickSand";
@@ -523,20 +498,7 @@ public class GamePanel extends JPanel implements KeyListener {
 			currentLevel[Character.posY + 1][Character.posX] = characterOnBlock;
 			characterOnBlock = findCharacterOnBlock();
 			if (characterOnBlock.equals("portal")) {
-				System.out.println("ONPORTAL");
-				characterOnBlock = "portal";
-				for (int i = 0; i < 15; i++) {
-					for (int j = 0; j < 19; j++) {
-						if (currentLevel[i][j].equals("portal") && i != Character.posY && j != Character.posX) {
-							Character.setPosX(j);
-							Character.setPosY(i);
-							currentLevel[i][j] = "character";
-						}
-						if (currentLevel[i][j].equals("portal") && i == Character.posY && j == Character.posX) {
-							currentLevel[i][j] = "portal";
-						}
-					}
-				}
+				portalEvent(level);
 			}
 			if (characterOnBlock.equals("end")) {
 				characterOnBlock = "sand";
@@ -564,20 +526,7 @@ public class GamePanel extends JPanel implements KeyListener {
 			currentLevel[Character.posY - 1][Character.posX] = characterOnBlock;
 			characterOnBlock = findCharacterOnBlock();
 			if (characterOnBlock.equals("portal")) {
-				System.out.println("ONPORTAL");
-				characterOnBlock = "portal";
-				for (int i = 0; i < 15; i++) {
-					for (int j = 0; j < 19; j++) {
-						if (currentLevel[i][j].equals("portal") && i != Character.posY && j != Character.posX) {
-							Character.setPosX(j);
-							Character.setPosY(i);
-							currentLevel[i][j] = "character";
-						}
-						if (currentLevel[i][j].equals("portal") && i == Character.posY && j == Character.posX) {
-							currentLevel[i][j] = "portal";
-						}
-					}
-				}
+				portalEvent(level);
 			}
 			if (characterOnBlock.equals("end")) {
 				characterOnBlock = "sand";
@@ -797,6 +746,32 @@ public class GamePanel extends JPanel implements KeyListener {
 
 		return tile;
 	}
+	
+	public void portalEvent(int level) {
+		if (level == 6) {
+			characterOnBlock = "portal";
+			currentLevel[13][6] = "character";
+			currentLevel[2][13] = "portal";
+		} else if (level == 7) {
+			characterOnBlock = "portal";
+			currentLevel[8][6] = "portal";
+			currentLevel[7][11] = "character";
+		} else if (level == 8 ) {
+			characterOnBlock = "portal";
+			currentLevel[1][5] = "character";
+			currentLevel[8][9] = "portal";
+		} else if (level == 10) {
+			characterOnBlock = "portal";
+			if (enteredLevel10) {
+				currentLevel[1][13] = "portal";
+				currentLevel[3][4] = "character";
+			} else {
+				currentLevel[3][4] = "portal";
+				currentLevel[1][13] = "character";
+				enteredLevel10 = true;
+			}
+		}
+	}
 
 	public void keyTyped(KeyEvent event) {
 
@@ -806,6 +781,7 @@ public class GamePanel extends JPanel implements KeyListener {
 	public void keyPressed(KeyEvent e) {
 
 	}
+	
 
 	@Override
 	public void keyReleased(KeyEvent event) {
