@@ -85,12 +85,13 @@ public class DesertOfDoom extends JFrame {
 		
 	}
 	
-	private static void showScreen(String a) {
+	static void showScreen(String a) {
 		cL.show(cards, a);
 	}
 	
 	public static void main(String[] args) {
 		DesertOfDoom game = new DesertOfDoom();
+		BackgroundPanel.level.setText("Level: 1");
 		synchronized (waitObject) {
 			try {
 				waitObject.wait();
@@ -99,6 +100,7 @@ public class DesertOfDoom extends JFrame {
 			}
 		}
 		gamePanel = new GamePanel(2);
+		BackgroundPanel.level.setText("Level: 2");
 		synchronized (waitObject) {
 			try {
 				waitObject.wait();
@@ -107,6 +109,7 @@ public class DesertOfDoom extends JFrame {
 			}
 		}
 		gamePanel = new GamePanel(3);
+		BackgroundPanel.level.setText("Level: 3");
 		synchronized (waitObject) {
 			try {
 				waitObject.wait();
@@ -115,6 +118,7 @@ public class DesertOfDoom extends JFrame {
 			}
 		}
 		gamePanel = new GamePanel(4);
+		BackgroundPanel.level.setText("Level: 4");
 		synchronized (waitObject) {
 			try {
 				waitObject.wait();
@@ -123,6 +127,7 @@ public class DesertOfDoom extends JFrame {
 			}
 		}
 		gamePanel = new GamePanel(5);
+		BackgroundPanel.level.setText("Level: 5");
 		synchronized (waitObject) {
 			try {
 				waitObject.wait();
@@ -131,6 +136,7 @@ public class DesertOfDoom extends JFrame {
 			}
 		}
 		gamePanel = new GamePanel(6);
+		BackgroundPanel.level.setText("Level: 6");
 		synchronized (waitObject) {
 			try {
 				waitObject.wait();
@@ -139,6 +145,7 @@ public class DesertOfDoom extends JFrame {
 			}
 		}
 		gamePanel = new GamePanel(7);
+		BackgroundPanel.level.setText("Level: 7");
 		synchronized (waitObject) {
 			try {
 				waitObject.wait();
@@ -147,6 +154,7 @@ public class DesertOfDoom extends JFrame {
 			}
 		}
 		gamePanel = new GamePanel(8);
+		BackgroundPanel.level.setText("Level: 8");
 		synchronized (waitObject) {
 			try {
 				waitObject.wait();
@@ -155,6 +163,7 @@ public class DesertOfDoom extends JFrame {
 			}
 		}
 		gamePanel = new GamePanel(9);
+		BackgroundPanel.level.setText("Level: 9");
 		synchronized (waitObject) {
 			try {
 				waitObject.wait();
@@ -163,6 +172,7 @@ public class DesertOfDoom extends JFrame {
 			}
 		}
 		gamePanel = new GamePanel(10);
+		BackgroundPanel.level.setText("Level: 10");
 		synchronized (waitObject) {
 			try {
 				waitObject.wait();
