@@ -5,17 +5,24 @@ import javax.swing.JPanel;
 
 public class BackgroundPanel extends JPanel {
     JPanel game;
-    JLabel level;
-    String levelText;
+    static JLabel level;
+	static JLabel point;
+    static String levelText;
     public static JButton quit, title;
+    public static int points;
     
 	public BackgroundPanel() {
 		setLayout(null);
-		levelText = "Level " + String.valueOf(GamePanel.level);
+		points = 0;
+		levelText = "Level: ";
 		level = new JLabel(levelText, JLabel.CENTER);
 		level.setFont(new Font("Garamond", Font.PLAIN, 30));
 		level.setBounds(380,10,200,30);
+		point = new JLabel("Score: " + points);
+		point.setFont(new Font("Garamond", Font.PLAIN, 30));
+		point.setBounds(600,10,200,30);
 		add(level);
+		add(point);
 		
 		quit = new JButton("Quit");
 		title = new JButton("Title Screen");
@@ -26,4 +33,10 @@ public class BackgroundPanel extends JPanel {
 		add(quit);
 		add(title);
 	}
+	
+	public static void updateVariables() {
+		point.setText("Score: " + points);
+
+	}
+	
 }
