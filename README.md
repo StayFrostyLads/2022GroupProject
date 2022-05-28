@@ -16,7 +16,7 @@ Andry Joseph -
 
 ## Description:
 
-Desert of Doom is a clone of Thin Ice by Club Penguin. It is a puzzle type game where the user tries to get through each level and get the most points.
+Desert of Doom is a clone of Thin Ice by Club Penguin (clone of the idea - new theme and original levels). It is a puzzle type game where the user tries to get through each level and get the most points.
 Controls are WASD/Arrow Keys to move.
 
 ### Year-2 Concepts
