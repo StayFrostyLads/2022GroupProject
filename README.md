@@ -31,4 +31,4 @@ Controls are WASD/Arrow Keys to move.
 Flow Chart:
 ![Flow Chart](https://user-images.githubusercontent.com/61328987/148413463-abf1f0d4-8fff-498f-be9c-a7014a29997b.png)
 Picture of Game:
-![Game Pic]()
+![Game Pic](https://github.com/StayFrostyLads/2022GroupProject/blob/main/documentation/Game%20Pic.png)
