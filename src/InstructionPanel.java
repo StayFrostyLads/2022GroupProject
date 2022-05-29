@@ -61,7 +61,6 @@ public class InstructionPanel extends JPanel {
 		eWords.setFont(new Font("Garamond", Font.PLAIN, 17));
 		eWords.setBounds(97,200,300,50);
 		JLabel qsWords = new JLabel("<html>Quicksand: You can't step on it and lose <br/>if you get stuck in it</html>");
-		//qsWords.setLineWrap(true);
 		qsWords.setFont(new Font("Garamond", Font.PLAIN, 17));
 		qsWords.setBounds(97,275,300,50);
 		JLabel mWords = new JLabel("Money: Collect for extra points");
