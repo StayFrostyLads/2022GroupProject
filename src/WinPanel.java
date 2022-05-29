@@ -1,9 +1,13 @@
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import java.awt.*;
 
 public class WinPanel extends JPanel {
 	public WinPanel() {
+		setBackground(Color.ORANGE);
 		JLabel title = new JLabel("YOU WIN");
+		title.setBounds(160,200,600,200);
+		title.setFont(new Font("Garamond", Font.PLAIN, 90));
 		add(title);
 	}
 }
