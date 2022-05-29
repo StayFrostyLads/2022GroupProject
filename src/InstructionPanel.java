@@ -55,15 +55,25 @@ public class InstructionPanel extends JPanel {
 		wTile.setIcon(wall);
 		wTile.setBounds(400,350,50,50);
 		
-		JLabel sWords = new JLabel();
-		JLabel eWords = new JLabel();
-		JLabel qsWords = new JLabel();
-		JLabel mWords = new JLabel();
-		JLabel pWords = new JLabel();
-		JLabel hsWords = new JLabel();
-		JLabel kWords = new JLabel();
-		JLabel lWords = new JLabel();
-		JLabel wWords = new JLabel();
+		JLabel sWords = new JLabel("Sand: You can only step on each space once");
+		sWords.setFont(new Font("Garamond", Font.PLAIN, 17));
+		sWords.setBounds(97,125,300,50);
+		JLabel eWords = new JLabel("End: Reach this point to complete the level");
+		eWords.setFont(new Font("Garamond", Font.PLAIN, 17));
+		JLabel qsWords = new JLabel("Quicksand: You can't step on it and lose if you get stuck in it");
+		qsWords.setFont(new Font("Garamond", Font.PLAIN, 17));
+		JLabel mWords = new JLabel("Money: Collect for extra points");
+		mWords.setFont(new Font("Garamond", Font.PLAIN, 17));
+		JLabel pWords = new JLabel("Portal: Enter one exit the other");
+		pWords.setFont(new Font("Garamond", Font.PLAIN, 17));
+		JLabel hsWords = new JLabel("Hard Sand: You can step on this space twice");
+		hsWords.setFont(new Font("Garamond", Font.PLAIN, 17));
+		JLabel kWords = new JLabel("Key: Needed to unlock locks");
+		kWords.setFont(new Font("Garamond", Font.PLAIN, 17));
+		JLabel lWords = new JLabel("Lock: You cannot move past this without a key");
+		lWords.setFont(new Font("Garamond", Font.PLAIN, 17));
+		JLabel wWords = new JLabel("Wall: You cannot go through walls");
+		wWords.setFont(new Font("Garamond", Font.PLAIN, 17));
 		
 		start = new JButton("Start"); // JButtons and labels can be images, so we can design good images so it looks good
 		start.setBackground(Color.GREEN);
@@ -86,6 +96,15 @@ public class InstructionPanel extends JPanel {
 		add(kTile);
 		add(lTile);
 		add(wTile);
+		add(sWords);
+		add(eWords);
+		add(qsWords);
+		add(mWords);
+		add(pWords);
+		add(hsWords);
+		add(kWords);
+		add(lWords);
+		add(wWords);
 		
 	}
 
