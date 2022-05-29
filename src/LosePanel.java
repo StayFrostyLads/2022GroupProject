@@ -7,7 +7,7 @@ public class LosePanel extends JPanel {
 		setLayout(null);
 		JLabel title = new JLabel("YOU LOSE");
 		title.setBounds(160,200,600,200);
-		title.setFont(new Font("Garamond", Font.PLAIN, 90));;
+		title.setFont(new Font("Garamond", Font.PLAIN, 90));
 		add(title);
 		setBackground(Color.ORANGE);
 	}
