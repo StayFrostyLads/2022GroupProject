@@ -16,7 +16,6 @@ public class InstructionPanel extends JPanel {
 		title.setFont(new Font("Garamond", Font.PLAIN, 70));
 		add(title);
 		
-		//Add text for instructions
 		ImageIcon sand = new ImageIcon("./images/sand.jpg");
 		ImageIcon end = new ImageIcon("./images/end.png");
 		ImageIcon quickSand = new ImageIcon("./images/quickSand.png");
@@ -61,7 +60,8 @@ public class InstructionPanel extends JPanel {
 		JLabel eWords = new JLabel("End: Reach this point to complete the level");
 		eWords.setFont(new Font("Garamond", Font.PLAIN, 17));
 		eWords.setBounds(97,200,300,50);
-		JLabel qsWords = new JLabel("Quicksand: You can't step on it and lose if you get stuck in it");
+		JLabel qsWords = new JLabel("<html>Quicksand: You can't step on it and lose <br/>if you get stuck in it</html>");
+		//qsWords.setLineWrap(true);
 		qsWords.setFont(new Font("Garamond", Font.PLAIN, 17));
 		qsWords.setBounds(97,275,300,50);
 		JLabel mWords = new JLabel("Money: Collect for extra points");
@@ -76,7 +76,7 @@ public class InstructionPanel extends JPanel {
 		JLabel kWords = new JLabel("Key: Needed to unlock locks");
 		kWords.setFont(new Font("Garamond", Font.PLAIN, 17));
 		kWords.setBounds(455,200,300,50);
-		JLabel lWords = new JLabel("Lock: You cannot move past this without a key");
+		JLabel lWords = new JLabel("<html>Lock: You cannot move past this without <br/>a key</html>");
 		lWords.setFont(new Font("Garamond", Font.PLAIN, 17));
 		lWords.setBounds(455,275,300,50);
 		JLabel wWords = new JLabel("Wall: You cannot go through walls");
