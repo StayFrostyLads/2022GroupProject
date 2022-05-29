@@ -60,20 +60,28 @@ public class InstructionPanel extends JPanel {
 		sWords.setBounds(97,125,300,50);
 		JLabel eWords = new JLabel("End: Reach this point to complete the level");
 		eWords.setFont(new Font("Garamond", Font.PLAIN, 17));
+		eWords.setBounds(97,200,300,50);
 		JLabel qsWords = new JLabel("Quicksand: You can't step on it and lose if you get stuck in it");
 		qsWords.setFont(new Font("Garamond", Font.PLAIN, 17));
+		qsWords.setBounds(97,275,300,50);
 		JLabel mWords = new JLabel("Money: Collect for extra points");
 		mWords.setFont(new Font("Garamond", Font.PLAIN, 17));
+		mWords.setBounds(97,350,500,50);
 		JLabel pWords = new JLabel("Portal: Enter one exit the other");
 		pWords.setFont(new Font("Garamond", Font.PLAIN, 17));
+		pWords.setBounds(97,425,300,50);
 		JLabel hsWords = new JLabel("Hard Sand: You can step on this space twice");
 		hsWords.setFont(new Font("Garamond", Font.PLAIN, 17));
+		hsWords.setBounds(455,125,300,50);
 		JLabel kWords = new JLabel("Key: Needed to unlock locks");
 		kWords.setFont(new Font("Garamond", Font.PLAIN, 17));
+		kWords.setBounds(455,200,300,50);
 		JLabel lWords = new JLabel("Lock: You cannot move past this without a key");
 		lWords.setFont(new Font("Garamond", Font.PLAIN, 17));
+		lWords.setBounds(455,275,300,50);
 		JLabel wWords = new JLabel("Wall: You cannot go through walls");
 		wWords.setFont(new Font("Garamond", Font.PLAIN, 17));
+		wWords.setBounds(455,350,300,50);
 		
 		start = new JButton("Start"); // JButtons and labels can be images, so we can design good images so it looks good
 		start.setBackground(Color.GREEN);
