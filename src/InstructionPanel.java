@@ -12,7 +12,7 @@ public class InstructionPanel extends JPanel {
 	public InstructionPanel() {
 		setLayout(null);
 		JLabel title = new JLabel("Instructions"); //Will be image in future - Stacker just say Desert of Doom in good font
-		title.setBounds(200,50,550,75);
+		title.setBounds(200,25,550,75);
 		title.setFont(new Font("Garamond", Font.PLAIN, 70));
 		add(title);
 		
