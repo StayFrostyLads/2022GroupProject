@@ -1,3 +1,5 @@
+import java.net.URL;
+
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
@@ -9,29 +11,31 @@ public class Character extends JLabel {
 	boolean canLeft;
 	boolean canRight;
 	static boolean hasKey;
+	URL urlL = DesertOfDoom.class.getResource("/images/indybuff-l.png");
+	URL urlR = DesertOfDoom.class.getResource("/images/indybuff-r.png");
 
 	public Character() {
 		setVisible(true);
 		hasKey = false;
-		ImageIcon a = new ImageIcon("./images/indybuff-r.png");
+		ImageIcon indyBuffR = new ImageIcon(urlR);
+		setIcon(indyBuffR);
+	}
+
+	public void changeDirection(boolean right) {
+		ImageIcon a;
+		if (right) {
+			a = new ImageIcon(urlR);
+		} else {
+			a = new ImageIcon(urlL);
+		}
 		setIcon(a);
 	}
-	
-    public void changeDirection(boolean right) {
-    	ImageIcon a;
-    	if (right) {
-    		a = new ImageIcon("./images/indybuff-r");
-    	} else {
-    		a = new ImageIcon("./images/indybuff-l");
-    	}
-    	setIcon(a);
-    }
 
 	public void checkSurroundings() {
 		String blockState;
-		
-        blockState = GamePanel.currentLevel[posY][posX];
-        
+
+		blockState = GamePanel.currentLevel[posY][posX];
+
 		// right
 		try {
 			blockState = GamePanel.currentLevel[posY][posX + 1];
@@ -139,12 +143,11 @@ public class Character extends JLabel {
 			blockState = "Edge";
 			canDown = false;
 		}
-		
-		if(!canUp && !canDown && !canLeft && !canRight) {
+
+		if (!canUp && !canDown && !canLeft && !canRight) {
 			DesertOfDoom.showScreen("lose");
 		}
 	}
-
 
 	public static void setPosX(int x) {
 		posX = x;
