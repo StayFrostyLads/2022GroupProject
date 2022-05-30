@@ -1,3 +1,1 @@
-Username,password,level
-HenryChristiansen,abc123,1
-JackNebeker,ClubPeng3283,1
+HenryChristiansen,Wasatch92!,1

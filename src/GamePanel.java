@@ -8,6 +8,10 @@ import java.awt.event.KeyListener;
 import java.net.URL;
 
 public class GamePanel extends JPanel implements KeyListener {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	public static int level = 1;
 	public static String[][] currentLevel = new String[15][19];
 	public static String[][] hardSandHelperArray = new String[15][19];
@@ -727,7 +731,7 @@ public class GamePanel extends JPanel implements KeyListener {
 			ImageIcon end = new ImageIcon(urlEnd);
 			tile.setIcon(end);
 		} else if (type.equals("money")) {
-			URL urlMoney = DesertOfDoom.class.getResource("/images/Money.png");
+			URL urlMoney = DesertOfDoom.class.getResource("/images/money.png");
 			ImageIcon money = new ImageIcon(urlMoney);
 			tile.setIcon(money);
 		} else if (type.equals("portal")) {
@@ -747,7 +751,7 @@ public class GamePanel extends JPanel implements KeyListener {
 			ImageIcon blank = new ImageIcon(urlBlank);
 			tile.setIcon(blank);
 		} else if (type.equals("lock")) {
-			URL urlLock = DesertOfDoom.class.getResource("/images/Lock.png");
+			URL urlLock = DesertOfDoom.class.getResource("/images/lock.png");
 			ImageIcon lock = new ImageIcon(urlLock);
 			tile.setIcon(lock);
 		} else {
@@ -765,12 +769,23 @@ public class GamePanel extends JPanel implements KeyListener {
 			currentLevel[2][13] = "portal";
 		} else if (level == 7) {
 			characterOnBlock = "portal";
-			currentLevel[8][6] = "portal";
-			currentLevel[7][11] = "character";
+			System.out.println(Character.posX);
+			if (Character.posX == 11 && Character.posY == 7) {
+				currentLevel[8][6] = "character";
+				currentLevel[7][11] = "portal";
+			} else {
+				currentLevel[8][6] = "portal";
+				currentLevel[7][11] = "character";
+			}
 		} else if (level == 8) {
 			characterOnBlock = "portal";
-			currentLevel[1][5] = "character";
-			currentLevel[8][9] = "portal";
+			if (Character.posX == 9 && Character.posY == 8) {
+				currentLevel[1][5] = "character";
+				currentLevel[8][9] = "portal";
+			} else {
+				currentLevel[1][5] = "portal";
+				currentLevel[8][9] = "character";
+			}
 		} else if (level == 10) {
 			characterOnBlock = "portal";
 			if (enteredLevel10) {

@@ -5,12 +5,17 @@ import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 
 public class BackgroundPanel extends JPanel {
-    JPanel game;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	JPanel game;
     static JLabel level;
 	static JLabel point;
     static String levelText;
     public static JButton quit, title;
     public static int points;
+    public static Stopwatch stopwatch = new Stopwatch();
     
 	public BackgroundPanel() {
 		setLayout(null);
@@ -22,19 +27,28 @@ public class BackgroundPanel extends JPanel {
 		level = new JLabel(levelText, JLabel.CENTER);
 		level.setForeground(Color.BLACK);
 		level.setFont(new Font("Garamond", Font.PLAIN, 30));
-		level.setBounds(280,20,200,30);
+		level.setBounds(250,20,200,30);
 		point = new JLabel("Score: " + points);
 		point.setFont(new Font("Garamond", Font.PLAIN, 30));
-		point.setBounds(500,20,200,30);
+		point.setBounds(440,20,200,30);
 		point.setForeground(Color.BLACK);
 		add(level);
 		add(point);
 		
+		stopwatch.setLocation(600,20);
+		add(stopwatch);
+		
 		quit = new JButton("Quit");
 		title = new JButton("Title Screen");
 		
+		quit.setFocusable(false);
+		title.setFocusable(false);
+		
 		quit.setBounds(140, 20, 100, 30);
 		title.setBounds(10, 20, 120, 30);
+		
+		quit.setFocusable(false);
+		title.setFocusable(false);
 		
 		quit.setBackground(brown);
 		title.setBackground(brown);

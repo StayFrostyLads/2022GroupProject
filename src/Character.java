@@ -4,6 +4,10 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 public class Character extends JLabel {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	static int posX;
 	static int posY;
 	boolean canUp;
@@ -145,6 +149,10 @@ public class Character extends JLabel {
 		}
 
 		if (!canUp && !canDown && !canLeft && !canRight) {
+			BackgroundPanel.stopwatch.stop();
+			LosePanel.pointsLabel.setText("Total Score: " + BackgroundPanel.points);
+			LosePanel.levelLabel.setText("Level Achieved: " + GamePanel.level);
+			LosePanel.timeLabel.setText(BackgroundPanel.stopwatch.time);
 			DesertOfDoom.showScreen("lose");
 		}
 	}

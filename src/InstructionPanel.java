@@ -8,6 +8,10 @@ import java.net.URL;
 
 public class InstructionPanel extends JPanel {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	public static JButton start, quit;
 	JLabel title;
 	
@@ -31,10 +35,10 @@ public class InstructionPanel extends JPanel {
 		URL urlQSand = DesertOfDoom.class.getResource("/images/quickSand.png");
 		ImageIcon quickSand = new ImageIcon(urlQSand);
 		
-		URL urlMoney = DesertOfDoom.class.getResource("/images/Money.png");
+		URL urlMoney = DesertOfDoom.class.getResource("/images/money.png");
 		ImageIcon money = new ImageIcon(urlMoney);
 		
-		URL urlPortal = DesertOfDoom.class.getResource("/images/Portal.png");
+		URL urlPortal = DesertOfDoom.class.getResource("/images/portal.png");
 		ImageIcon portal = new ImageIcon(urlPortal);
 		
 		URL urlHSand = DesertOfDoom.class.getResource("/images/hardSand.png");
@@ -43,7 +47,7 @@ public class InstructionPanel extends JPanel {
 		URL urlKey = DesertOfDoom.class.getResource("/images/key.png");
 		ImageIcon key = new ImageIcon(urlKey);
 		
-		URL urlLock = DesertOfDoom.class.getResource("/images/Lock.png");
+		URL urlLock = DesertOfDoom.class.getResource("/images/lock.png");
 		ImageIcon lock = new ImageIcon(urlLock);
 		
 		URL urlWall = DesertOfDoom.class.getResource("/images/wall.png");
@@ -116,12 +120,14 @@ public class InstructionPanel extends JPanel {
 		
 		start = new JButton("Start"); // JButtons and labels can be images, so we can design good images so it looks good
 		start.setBackground(brown);
+		start.setFocusable(false);
 		start.setBounds(100, 500, 200, 100);
 		start.setFont(new Font("Garamond", Font.PLAIN, 30));
 		start.setBorder(new LineBorder(Color.BLACK));
 		start.setForeground(Color.BLACK);
 		quit = new JButton("Quit");
 		quit.setBackground(brown);
+		quit.setFocusable(false);
 		quit.setForeground(Color.BLACK);
 		quit.setBorder(new LineBorder(Color.BLACK));
 		quit.setBounds(450, 500, 200, 100);
