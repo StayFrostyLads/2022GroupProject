@@ -82,6 +82,26 @@ public class DesertOfDoom extends JFrame {
 				cL.show(cards,  "title");
 			}
 		});
+		LosePanel.titleB.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				cL.show(cards,  "title");
+			}
+		});
+		LosePanel.quit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);;
+			}
+		});
+		WinPanel.titleB.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				cL.show(cards,  "title");
+			}
+		});
+		WinPanel.quit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);;
+			}
+		});
 		
 	}
 	
