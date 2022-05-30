@@ -1,14 +1,46 @@
+import java.awt.Color;
+import java.awt.Font;
+import java.net.URL;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import java.awt.*;
+import javax.swing.border.LineBorder;
 
 public class LosePanel extends JPanel {
+	public static JButton quit, titleB;
+	Color brown = new Color(194, 178, 128);
+
 	public LosePanel() {
 		setLayout(null);
-		JLabel title = new JLabel("YOU LOSE");
-		title.setBounds(160,200,600,200);
-		title.setFont(new Font("Garamond", Font.PLAIN, 90));
+		Color color = new Color(152, 133, 88);
+		setBackground(color);
+		URL urlL = DesertOfDoom.class.getResource("/images/you lose.png");
+		ImageIcon l = new ImageIcon(urlL);
+		JLabel title = new JLabel(l);
+		title.setBounds(40, 180, 700, 300);
 		add(title);
-		setBackground(Color.ORANGE);
+
+		quit = new JButton("Quit");
+		titleB = new JButton("Title Screen");
+
+		quit.setBounds(140, 20, 100, 30);
+		titleB.setBounds(10, 20, 120, 30);
+
+		quit.setBackground(brown);
+		titleB.setBackground(brown);
+
+		quit.setForeground(Color.BLACK);
+		titleB.setForeground(Color.BLACK);
+
+		quit.setFont(new Font("Garamond", Font.PLAIN, 17));
+		titleB.setFont(new Font("Garamond", Font.PLAIN, 17));
+
+		quit.setBorder(new LineBorder(Color.BLACK));
+		titleB.setBorder(new LineBorder(Color.BLACK));
+
+		add(quit);
+		add(titleB);
 	}
 }
