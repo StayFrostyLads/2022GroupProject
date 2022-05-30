@@ -5,6 +5,7 @@ import javax.swing.JPanel;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.net.URL;
 
 public class GamePanel extends JPanel implements KeyListener {
 	public static int level = 1;
@@ -236,12 +237,12 @@ public class GamePanel extends JPanel implements KeyListener {
 					"wall", "sand", "wall", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "sand",
 					"wall", "sand", "wall", "blank", "blank", "blank" },
-			{ "blank", "blank", "blank", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall", /*row 8 col 12 */"portal",
-					"sand", "wall", "sand", "wall", "blank", "blank", "blank" },
-			{ "blank", "blank", "blank", "wall", "lock", "hardSand", /*row 9 col 7*/ "portal", "wall", "wall", "wall", "wall", "sand",
-					"money", "wall", "sand", "wall", "blank", "blank", "blank" },
-			{ "blank", "blank", "blank", "wall", "wall", "hardSand", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
-					"wall", "sand", "wall", "blank", "blank", "blank" },
+			{ "blank", "blank", "blank", "wall", "sand", "wall", "wall", "wall", "wall", "wall", "wall",
+					/* row 8 col 12 */"portal", "sand", "wall", "sand", "wall", "blank", "blank", "blank" },
+			{ "blank", "blank", "blank", "wall", "lock", "hardSand", /* row 9 col 7 */ "portal", "wall", "wall", "wall",
+					"wall", "sand", "money", "wall", "sand", "wall", "blank", "blank", "blank" },
+			{ "blank", "blank", "blank", "wall", "wall", "hardSand", "wall", "wall", "wall", "wall", "wall", "wall",
+					"wall", "wall", "sand", "wall", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "wall", "end", "hardSand", "sand", "sand", "sand", "sand", "sand", "sand",
 					"sand", "sand", "hardSand", "wall", "blank", "blank", "blank" },
 			{ "blank", "blank", "blank", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall", "wall",
@@ -710,34 +711,44 @@ public class GamePanel extends JPanel implements KeyListener {
 	private JLabel createBlock(String type) {
 		JLabel tile = new JLabel();
 		if (type.equals("wall")) {
-			ImageIcon wall = new ImageIcon("./images/wall.png");
+			URL urlWall = DesertOfDoom.class.getResource("/images/wall.png");
+			ImageIcon wall = new ImageIcon(urlWall);
 			tile.setIcon(wall);
 		} else if (type.equals("sand")) {
-			ImageIcon sand = new ImageIcon("./images/sand.jpg");
+			URL urlSand = DesertOfDoom.class.getResource("/images/sand.jpg");
+			ImageIcon sand = new ImageIcon(urlSand);
 			tile.setIcon(sand);
 		} else if (type.equals("quickSand")) {
-			ImageIcon quickSand = new ImageIcon("./images/quickSand.png");
+			URL urlQuickSand = DesertOfDoom.class.getResource("/images/quickSand.png");
+			ImageIcon quickSand = new ImageIcon(urlQuickSand);
 			tile.setIcon(quickSand);
 		} else if (type.equals("end")) {
-			ImageIcon end = new ImageIcon("./images/end.png");
+			URL urlEnd = DesertOfDoom.class.getResource("/images/end.png");
+			ImageIcon end = new ImageIcon(urlEnd);
 			tile.setIcon(end);
 		} else if (type.equals("money")) {
-			ImageIcon money = new ImageIcon("./images/Money.png");
+			URL urlMoney = DesertOfDoom.class.getResource("/images/Money.png");
+			ImageIcon money = new ImageIcon(urlMoney);
 			tile.setIcon(money);
 		} else if (type.equals("portal")) {
-			ImageIcon portal = new ImageIcon("./images/Portal.png");
+			URL urlPortal = DesertOfDoom.class.getResource("/images/portal.png");
+			ImageIcon portal = new ImageIcon(urlPortal);
 			tile.setIcon(portal);
 		} else if (type.equals("hardSand")) {
-			ImageIcon hardSand = new ImageIcon("./images/hardSand.png");
+			URL urlHardSand = DesertOfDoom.class.getResource("/images/hardSand.png");
+			ImageIcon hardSand = new ImageIcon(urlHardSand);
 			tile.setIcon(hardSand);
 		} else if (type.equals("key")) {
-			ImageIcon key = new ImageIcon("./images/key.png");
+			URL urlKey = DesertOfDoom.class.getResource("/images/key.png");
+			ImageIcon key = new ImageIcon(urlKey);
 			tile.setIcon(key);
 		} else if (type.equals("blank")) {
-			ImageIcon blank = new ImageIcon("./images/blank.png");
+			URL urlBlank = DesertOfDoom.class.getResource("/images/blank.png");
+			ImageIcon blank = new ImageIcon(urlBlank);
 			tile.setIcon(blank);
 		} else if (type.equals("lock")) {
-			ImageIcon lock = new ImageIcon("./images/Lock.png");
+			URL urlLock = DesertOfDoom.class.getResource("/images/Lock.png");
+			ImageIcon lock = new ImageIcon(urlLock);
 			tile.setIcon(lock);
 		} else {
 			tile.setText("Error");
@@ -746,7 +757,7 @@ public class GamePanel extends JPanel implements KeyListener {
 
 		return tile;
 	}
-	
+
 	public void portalEvent(int level) {
 		if (level == 6) {
 			characterOnBlock = "portal";
@@ -756,7 +767,7 @@ public class GamePanel extends JPanel implements KeyListener {
 			characterOnBlock = "portal";
 			currentLevel[8][6] = "portal";
 			currentLevel[7][11] = "character";
-		} else if (level == 8 ) {
+		} else if (level == 8) {
 			characterOnBlock = "portal";
 			currentLevel[1][5] = "character";
 			currentLevel[8][9] = "portal";
@@ -781,7 +792,6 @@ public class GamePanel extends JPanel implements KeyListener {
 	public void keyPressed(KeyEvent e) {
 
 	}
-	
 
 	@Override
 	public void keyReleased(KeyEvent event) {
