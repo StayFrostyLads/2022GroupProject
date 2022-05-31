@@ -10,7 +10,7 @@ Henry Christiansen - Senior^2 Developer
 
 Jack Nebeker - Developer & GitHub Manager & Spelling Speciailist
 
-Rowan Turner - Developer & Level Architect
+Sophia Turner - Developer & Level Architect
 
 Andry Joseph - 
 
